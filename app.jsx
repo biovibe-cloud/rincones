@@ -60,6 +60,7 @@ function App() {
     { id: 'inicio', label: 'Inicio' },
     { id: 'historias', label: 'Historias' },
     { id: 'mapa', label: 'Mapa' },
+    { id: 'mapafotos', label: 'Mapa de fotos' },
     { id: 'nosotros', label: 'Nosotros' },
   ];
 
@@ -217,6 +218,7 @@ function App() {
         {page === 'historias' && <window.HistoriasPage t={t} nav={nav} />}
         {page === 'post' && <window.PostPage t={t} nav={nav} postId={postId} />}
         {page === 'mapa' && <window.MapaPage t={t} nav={nav} />}
+        {page === 'mapafotos' && <window.MapaFotosPage t={t} nav={nav} />}
         {page === 'nosotros' && <window.NosotrosPage t={t} nav={nav} />}
       </main>
 

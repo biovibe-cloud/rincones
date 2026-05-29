@@ -553,4 +553,41 @@ function NosotrosPage({ t, nav }) {
   );
 }
 
-Object.assign(window, { HomePage, HistoriasPage, PostPage, MapaPage, NosotrosPage });
+// ============= MAPA DE FOTOS (app interactiva embebida) =============
+function MapaFotosPage({ t, nav }) {
+  const isC = t.style === 'scrapbook';
+  const MAP_URL = 'https://biovibe-cloud.github.io/mapaFlickr-Codex/';
+  return (
+    <div className="om-mapaf">
+      <style>{`
+        .om-mapaf { padding: 56px 0; }
+        .om-mapaf-head { display:grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; margin-bottom: 28px; }
+        .om-mapaf-head .eb { font-family: ${isC ? t.fontMono : t.fontBody}; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: ${t.accent1}; font-weight: 600; margin-bottom: 14px; }
+        .om-mapaf-head h1 { font-family: ${t.fontDisplay}; font-size: clamp(38px, 6vw, 64px); font-weight: ${t.weights.display}; letter-spacing: ${t.letterspacing}; line-height: 1.05; margin: 0 0 12px; color: ${t.text}; text-wrap: pretty; }
+        .om-mapaf-head p { font-size: 16px; line-height: 1.6; color: ${t.textMuted}; margin: 0; max-width: 620px; }
+        .om-mapaf-open { font-size: 14px; font-weight: 600; color: ${t.accent2}; white-space: nowrap; text-decoration: none; }
+        .om-mapaf-open:hover { text-decoration: underline; }
+        .om-mapaf-frame { width: 100%; height: clamp(540px, 78vh, 860px); border: 1px solid ${t.line}; border-radius: ${t.radius}; overflow: hidden; background: ${t.bgAlt}; }
+        .om-mapaf-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .om-mapaf-note { margin-top: 16px; font-size: 13px; color: ${t.textMuted}; }
+        @media (max-width: 700px) { .om-mapaf-head { grid-template-columns: 1fr; } .om-mapaf-frame { height: clamp(440px, 70vh, 620px); } }
+      `}</style>
+
+      <div className="om-mapaf-head">
+        <div>
+          <div className="eb">Mapa de fotos</div>
+          <h1>Cada foto, en el lugar donde la tomamos.</h1>
+          <p>Nuestro mapa interactivo: explora las fotos geolocalizadas, muévete por el mundo y acércate a cada viaje.</p>
+        </div>
+        <a className="om-mapaf-open" href={MAP_URL} target="_blank" rel="noopener noreferrer">Abrir en pantalla completa →</a>
+      </div>
+
+      <div className="om-mapaf-frame">
+        <iframe src={MAP_URL} title="Mapa de fotos — mapaFlickr" loading="lazy" allowFullScreen></iframe>
+      </div>
+      <div className="om-mapaf-note">Si el mapa tarda en cargar, espera unos segundos o ábrelo en pantalla completa.</div>
+    </div>
+  );
+}
+
+Object.assign(window, { HomePage, HistoriasPage, PostPage, MapaPage, MapaFotosPage, NosotrosPage });

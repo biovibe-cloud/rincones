@@ -554,9 +554,22 @@ function NosotrosPage({ t, nav }) {
 }
 
 // ============= MAPA DE FOTOS (app interactiva embebida) =============
+// ─────────────────────────────────────────────────────────────────────────
+// AJUSTES DEL MAPA DE FOTOS
+// Cambia estos dos valores por los tuyos:
+//   API_KEY  → tu clave de la API de Flickr (la que te dieron como "apiKey").
+//   ALBUM_ID → el id del álbum de Flickr que quieres mostrar.
+const MAPA_API_KEY = '8c7bd436cdbb43d21dccd254c4f13a8d';
+const MAPA_ALBUM_ID = '72157699212454140';
+// ─────────────────────────────────────────────────────────────────────────
+const MAPA_BASE = 'https://biovibe-cloud.github.io/mapaFlickr-Codex/';
+
 function MapaFotosPage({ t, nav }) {
   const isC = t.style === 'scrapbook';
-  const MAP_URL = 'https://biovibe-cloud.github.io/mapaFlickr-Codex/';
+  // URL embebida (sin adornos, para iframe) y URL para abrir a pantalla completa.
+  const params = `albumId=${MAPA_ALBUM_ID}&apiKey=${MAPA_API_KEY}`;
+  const EMBED_URL = `${MAPA_BASE}?embed=1&${params}`;
+  const MAP_URL = `${MAPA_BASE}?${params}`;
   const frameRef = React.useRef(null);
 
   // El mapa embebido (tipo Leaflet) mide su contenedor al arrancar. Cuando se
@@ -604,7 +617,7 @@ function MapaFotosPage({ t, nav }) {
       </div>
 
       <div className="om-mapaf-frame">
-        <iframe ref={frameRef} src={MAP_URL} title="Mapa de fotos — mapaFlickr" onLoad={nudge} allowFullScreen></iframe>
+        <iframe ref={frameRef} src={EMBED_URL} title="Mapa de fotos — mapaFlickr" onLoad={nudge} referrerPolicy="no-referrer-when-downgrade" allowFullScreen></iframe>
       </div>
       <div className="om-mapaf-note">Si el mapa tarda en cargar, espera unos segundos o ábrelo en pantalla completa.</div>
     </div>

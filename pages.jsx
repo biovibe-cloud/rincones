@@ -557,6 +557,27 @@ function NosotrosPage({ t, nav }) {
 function MapaFotosPage({ t, nav }) {
   const isC = t.style === 'scrapbook';
   const MAP_URL = 'https://biovibe-cloud.github.io/mapaFlickr-Codex/';
+  const frameRef = React.useRef(null);
+
+  // El mapa embebido (tipo Leaflet) mide su contenedor al arrancar. Cuando se
+  // monta al cambiar de página, ese instante puede ocurrir antes de que el
+  // recuadro tenga su altura final, y el mapa se queda en gris. Aquí le damos
+  // un pequeño "empujón" de tamaño tras cargar, lo que dispara el resize
+  // interno del mapa y hace que se recalcule y se pinte. En pantalla completa
+  // no hace falta porque el tamaño ya es correcto desde el inicio.
+  function nudge() {
+    const el = frameRef.current;
+    if (!el) return;
+    el.style.height = 'calc(100% - 1px)';
+    setTimeout(() => {
+      if (frameRef.current) frameRef.current.style.height = '100%';
+    }, 80);
+  }
+  React.useEffect(() => {
+    const timers = [120, 500, 1200, 2500].map((ms) => setTimeout(nudge, ms));
+    return () => timers.forEach(clearTimeout);
+  }, []);
+
   return (
     <div className="om-mapaf">
       <style>{`
@@ -583,7 +604,7 @@ function MapaFotosPage({ t, nav }) {
       </div>
 
       <div className="om-mapaf-frame">
-        <iframe src={MAP_URL} title="Mapa de fotos — mapaFlickr" loading="lazy" allowFullScreen></iframe>
+        <iframe ref={frameRef} src={MAP_URL} title="Mapa de fotos — mapaFlickr" onLoad={nudge} allowFullScreen></iframe>
       </div>
       <div className="om-mapaf-note">Si el mapa tarda en cargar, espera unos segundos o ábrelo en pantalla completa.</div>
     </div>

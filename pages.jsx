@@ -601,8 +601,8 @@ function MapaFotosPage({ t, nav }) {
         .om-mapaf-head p { font-size: 16px; line-height: 1.6; color: ${t.textMuted}; margin: 0; max-width: 620px; }
         .om-mapaf-open { font-size: 14px; font-weight: 600; color: ${t.accent2}; white-space: nowrap; text-decoration: none; }
         .om-mapaf-open:hover { text-decoration: underline; }
-        .om-mapaf-frame { width: 100%; height: clamp(540px, 78vh, 860px); border: 1px solid ${t.line}; border-radius: ${t.radius}; overflow: hidden; background: ${t.bgAlt}; }
-        .om-mapaf-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .om-mapaf-frame { width: 100%; height: clamp(540px, 78vh, 860px); padding: 6px; border: 1px solid ${t.line}; border-radius: calc(${t.radius} + 6px); overflow: hidden; background: ${t.bgAlt}; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 16px 40px -18px rgba(0,0,0,.22); box-sizing: border-box; }
+        .om-mapaf-frame iframe { width: 100%; height: 100%; border: 0; border-radius: ${t.radius}; display: block; }
         .om-mapaf-note { margin-top: 16px; font-size: 13px; color: ${t.textMuted}; }
         @media (max-width: 700px) { .om-mapaf-head { grid-template-columns: 1fr; } .om-mapaf-frame { height: clamp(440px, 70vh, 620px); } }
       `}</style>

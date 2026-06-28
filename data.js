@@ -97,7 +97,7 @@ window.BLOG_DATA = {
         "Naturaleza"
       ],
       "featured": false,
-      "coords": "44.10° N, 9.74° E",
+      "coords": "43.65° N, 79.38° W",
       "coverImage": "fotos/cinque-terre-cover.jpg",
       "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",
       "bodyParas": [
@@ -147,8 +147,8 @@ window.BLOG_DATA = {
         "Asia",
         "Naturaleza"
       ],
-      "featured": true,
-      "coords": "31.63° N, 7.99° W",
+      "featured": false,
+      "coords": "13.41° N, 103.87° E",
       "coverImage": "fotos/marrakech-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
@@ -188,6 +188,58 @@ window.BLOG_DATA = {
       ],
       "featured": false,
       "coords": "",
+      "coverImage": "fotos/cartagena-cover.jpg",
+      "bodyIntro": "La ciudad perfecta para pasar un tiempo en pareja: Playa, mar, ambientes románticos, buena comida local, tranquilidad y descanso.",
+      "bodyParas": [
+        "Cartagena de Indias es sin duda la cuidad más turística de Colombia por que lo tiene todo, es un lugar con un encanto especial, un amigo dice que es mágica y tiene razón, por eso cuando queremos escaparnos, dedicarnos un tiempo y disfrutar en un ambiente acogedor frecuentemente escogemos esta ciudad."
+      ],
+      "places": [
+        {
+          "name": "Murallas de la cuidad",
+          "type": "Otro",
+          "town": "",
+          "note": ""
+        },
+        {
+          "name": "Plazas de la ciudad amurallada",
+          "type": "Caminata",
+          "town": "",
+          "note": "Para sentarse a compartir"
+        },
+        {
+          "name": "Convento de la Popa",
+          "type": "S. Religioso",
+          "town": "",
+          "note": ""
+        }
+      ],
+      "album": [
+        "fotos/cartagena-alb-1.jpg",
+        "fotos/cartagena-alb-2.jpg",
+        "fotos/cartagena-alb-3.jpg",
+        "fotos/cartagena-alb-4.jpg",
+        "fotos/cartagena-alb-5.jpg"
+      ],
+      "monthIdx": 4
+    },
+    {
+      "id": "cartagena",
+      "title": "Cartagena",
+      "subtitle": "La ciudad más Romantica de Colombia",
+      "country": "Colombia",
+      "region": "Costa atlantica",
+      "date": "Mayo 2010",
+      "dateShort": "MAY · 10",
+      "year": 2010,
+      "readMin": 5,
+      "photoCount": 0,
+      "tags": [
+        "América",
+        "Ciudad",
+        "Playa"
+      ],
+      "featured": true,
+      "coords": "10.39° N, 75.51° W",
       "coverImage": "fotos/cartagena-cover.jpg",
       "bodyIntro": "La ciudad perfecta para pasar un tiempo en pareja: Playa, mar, ambientes románticos, buena comida local, tranquilidad y descanso.",
       "bodyParas": [

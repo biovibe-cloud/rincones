@@ -4,6 +4,58 @@ const { WorldMap: WM, PostCard: PC, SectionHead: SH, PhotoMapApp: PMA } = window
 const DATA = window.BLOG_DATA;
 const { useState, useEffect } = React;
 
+// ──────────────────────────────────────────────────────────────
+// DATOS CALCULADOS A PARTIR DE LAS HISTORIAS REALES
+// (asi los contadores, etiquetas y el mapa se mantienen solos al
+//  crear/editar/borrar historias; no hay numeros escritos a mano)
+const CONTINENT_TAGS = ['Europa', 'Asia', 'África', 'América', 'Oceanía'];
+const TAG_ORDER = ['Europa', 'Asia', 'África', 'América', 'Oceanía', 'Road trip', 'Ciudad', 'Playa', 'Naturaleza', 'Familia', 'Pueblos'];
+
+// Lee unas coordenadas tipo "41.16° N, 8.63° W" y devuelve {lat, lon}.
+function parseCoords(str) {
+  if (!str) return null;
+  const m = String(str).match(/(-?[\d.]+)\s*°?\s*([NS])?\s*[,;]\s*(-?[\d.]+)\s*°?\s*([EW])?/i);
+  if (!m) return null;
+  let lat = parseFloat(m[1]); if (m[2] && /s/i.test(m[2])) lat = -Math.abs(lat);
+  let lon = parseFloat(m[3]); if (m[4] && /w/i.test(m[4])) lon = -Math.abs(lon);
+  if (isNaN(lat) || isNaN(lon)) return null;
+  return { lat, lon };
+}
+// Proyecta lat/lon a la posicion (x,y en %) sobre el mapa estilizado.
+function projectToMap(lat, lon) {
+  const xe = (lon + 180) / 360 * 100;
+  const ye = (90 - lat) / 180 * 50;
+  const x = 0.847 * xe + 2.1;
+  const y = 1.162 * ye + 10.93;
+  return { x: Math.max(3, Math.min(97, x)), y: Math.max(4, Math.min(47, y)) };
+}
+// Pines del mapa = una marca por historia que tenga coordenadas.
+function derivePins(posts) {
+  return posts.map(p => {
+    const c = parseCoords(p.coords);
+    if (!c) return null;
+    const xy = projectToMap(c.lat, c.lon);
+    return { x: xy.x, y: xy.y, label: p.country || p.title, id: p.id };
+  }).filter(Boolean);
+}
+// Totales para los contadores.
+function deriveStats(posts) {
+  const paises = new Set(posts.map(p => (p.country || '').trim()).filter(Boolean)).size;
+  const fotos = posts.reduce((n, p) => n + ((p.album && p.album.length) || 0), 0);
+  const continentes = new Set();
+  posts.forEach(p => (p.tags || []).forEach(tg => { if (CONTINENT_TAGS.includes(tg)) continentes.add(tg); }));
+  return { paises, historias: posts.length, fotos, continentes: continentes.size };
+}
+// Etiquetas para los filtros = solo las que de verdad usa alguna historia.
+function deriveTagFilters(posts) {
+  const present = new Set();
+  posts.forEach(p => (p.tags || []).forEach(tg => present.add(tg)));
+  const ordered = TAG_ORDER.filter(tg => present.has(tg));
+  const extra = [...present].filter(tg => !TAG_ORDER.includes(tg));
+  return ['todos', ...ordered, ...extra];
+}
+// ──────────────────────────────────────────────────────────────
+
 // ============= INICIO =============
 function HomePage({ t, nav }) {
   const isC = t.style === 'scrapbook';
@@ -12,6 +64,8 @@ function HomePage({ t, nav }) {
   const sorted = DATA.posts; // ya viene ordenado por año desc
   const featured = sorted.find(p => p.featured) || sorted[0];
   const others = sorted.filter(p => p.id !== featured.id).slice(0, 3);
+  const stats = deriveStats(DATA.posts);
+  const pins = derivePins(DATA.posts);
 
   return (
     <div className="om-home">
@@ -94,14 +148,14 @@ function HomePage({ t, nav }) {
           )}
           {!isC && (
             <div>
-              <div className="om-stat-big">{DATA.family.stats.paises}</div>
+              <div className="om-stat-big">{stats.paises}</div>
               <div className="om-stat-lbl">Países visitados</div>
             </div>
           )}
           <div className="om-meta-table">
-            <div className="om-meta-row"><span className="k">Países</span><span className="v">{DATA.family.stats.paises}</span></div>
-            <div className="om-meta-row"><span className="k">Historias</span><span className="v">{DATA.family.stats.historias}</span></div>
-            <div className="om-meta-row"><span className="k">Fotos</span><span className="v">{DATA.family.stats.fotos.toLocaleString('es')}</span></div>
+            <div className="om-meta-row"><span className="k">Países</span><span className="v">{stats.paises}</span></div>
+            <div className="om-meta-row"><span className="k">Historias</span><span className="v">{stats.historias}</span></div>
+            <div className="om-meta-row"><span className="k">Fotos</span><span className="v">{stats.fotos.toLocaleString('es')}</span></div>
           </div>
         </div>
       </section>
@@ -123,7 +177,7 @@ function HomePage({ t, nav }) {
       {/* MAPA RESUMEN */}
       <section className="om-block">
         <SH eyebrow="Atlas" title="El mapa que dibujamos juntos." aside={<span style={{ cursor: 'pointer', color: t.accent2, fontWeight: 600 }} onClick={() => nav('mapa')}>Abrir mapa →</span>} t={t} />
-        <WM t={t} pins={DATA.worldPins} onPinClick={(id) => nav('post', id)} />
+        <WM t={t} pins={pins} onPinClick={(id) => nav('post', id)} />
       </section>
 
       {/* ENLACES RÁPIDOS */}
@@ -151,7 +205,7 @@ function HomePage({ t, nav }) {
 function HistoriasPage({ t, nav }) {
   const isC = t.style === 'scrapbook';
   const [filter, setFilter] = useState('todos');
-  const tags = ['todos', 'Europa', 'Asia', 'África', 'Road trip', 'Familia', 'Playa', 'Ciudad'];
+  const tags = deriveTagFilters(DATA.posts);
   const filtered = filter === 'todos' ? DATA.posts : DATA.posts.filter(p => p.tags && p.tags.includes(filter));
 
   return (
@@ -389,6 +443,8 @@ function PostPage({ t, nav, postId }) {
 // ============= MAPA =============
 function MapaPage({ t, nav }) {
   const isC = t.style === 'scrapbook';
+  const mapaStats = deriveStats(DATA.posts);
+  const mapaPins = derivePins(DATA.posts);
   return (
     <div className="om-mapa">
       <style>{`
@@ -417,21 +473,21 @@ function MapaPage({ t, nav }) {
           <h1>El mapa que dibujamos juntos.</h1>
         </div>
         <div className="om-m-stats">
-          <div><div className="num">{DATA.family.stats.paises}</div><div className="lbl">países</div></div>
-          <div><div className="num">{DATA.worldPins.length}</div><div className="lbl">marcas</div></div>
-          <div><div className="num">3</div><div className="lbl">continentes</div></div>
+          <div><div className="num">{mapaStats.paises}</div><div className="lbl">países</div></div>
+          <div><div className="num">{mapaPins.length}</div><div className="lbl">marcas</div></div>
+          <div><div className="num">{mapaStats.continentes}</div><div className="lbl">continentes</div></div>
         </div>
       </div>
 
       <div className="om-m-grid">
         <div>
-          <WM t={t} pins={DATA.worldPins} large onPinClick={(id) => nav('post', id)} />
+          <WM t={t} pins={mapaPins} large onPinClick={(id) => nav('post', id)} />
         </div>
         <div className="om-m-side">
           <div className="om-m-side-card">
             <h4>Lugares en el mapa</h4>
             <div className="om-m-pin-list">
-              {DATA.worldPins.map((p, i) => (
+              {mapaPins.map((p, i) => (
                 <div
                   key={i}
                   className={`om-m-pin-item ${p.future ? 'future' : ''}`}
@@ -452,6 +508,7 @@ function MapaPage({ t, nav }) {
 // ============= NOSOTROS =============
 function NosotrosPage({ t, nav }) {
   const isC = t.style === 'scrapbook';
+  const nosStats = deriveStats(DATA.posts);
   const memberColors = [t.accent1, t.accent2, t.accent3 || t.accent1, 'oklch(0.6 0.12 280)'];
   const wishTagStyle = (tag) => {
     if (tag === 'pronto') return { bg: t.accent1, color: 'oklch(0.97 0.005 80)' };
@@ -510,9 +567,9 @@ function NosotrosPage({ t, nav }) {
         <div className="om-nos-card">
           <h4>Diario en números</h4>
           <div className="om-nos-stats">
-            <div><div className="num">{DATA.family.stats.paises}</div><div className="lbl">países</div></div>
-            <div><div className="num">{DATA.family.stats.historias}</div><div className="lbl">historias</div></div>
-            <div><div className="num">{DATA.family.stats.fotos.toLocaleString('es')}</div><div className="lbl">fotos</div></div>
+            <div><div className="num">{nosStats.paises}</div><div className="lbl">países</div></div>
+            <div><div className="num">{nosStats.historias}</div><div className="lbl">historias</div></div>
+            <div><div className="num">{nosStats.fotos.toLocaleString('es')}</div><div className="lbl">fotos</div></div>
           </div>
         </div>
       </section>

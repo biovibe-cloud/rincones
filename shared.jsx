@@ -54,6 +54,7 @@ function WorldMap({ t, pins, height = 'auto', onPinClick, large = false }) {
 function PostCard({ post, t, onClick, variant = 'default' }) {
   const isC = t.style === 'scrapbook';
   const placeholderBg = `repeating-linear-gradient(45deg, ${t.bgAlt} 0 8px, ${t.paper} 8px 16px)`;
+  const nFotos = (post.album && post.album.length) || 0; // numero real de fotos del album
 
   if (variant === 'featured') {
     return (
@@ -106,7 +107,7 @@ function PostCard({ post, t, onClick, variant = 'default' }) {
       `}</style>
       <div className="pic" style={post.coverImage ? { backgroundImage: `url(${post.coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}>
         {!post.coverImage && `[ foto · ${post.id}.jpg ]`}
-        <div className="photo-count">{post.photoCount} fotos</div>
+        {nFotos > 0 && <div className="photo-count">{nFotos} foto{nFotos === 1 ? '' : 's'}</div>}
       </div>
       <div className="body">
         <div className="meta">{post.country} · {post.date}</div>

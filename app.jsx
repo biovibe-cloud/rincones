@@ -1,5 +1,21 @@
 // App principal: shell, barra de control, navegación
 
+// ───────────────────────────────────────────────────────────────
+// MODO EDICIÓN PRIVADO
+// El botón "✏️ Editar historias" SOLO aparece si entras a la web con
+// tu palabra mágica en la dirección, así:
+//     ...rincones.rubenarcila.com/?editar=familia2026
+// El público nunca ve el botón. Cambia la palabra de abajo por la tuya
+// y guárdate el enlace completo en un sitio seguro.
+const EDIT_SECRET = 'dfrd_2026';
+function checkEditMode() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('editar') === EDIT_SECRET;
+  } catch (e) { return false; }
+}
+// ───────────────────────────────────────────────────────────────
+
 const { useState: appUseState, useEffect: appUseEffect } = React;
 
 // Texto amable para "cuándo" se hizo la copia de seguridad
@@ -22,6 +38,7 @@ function App() {
   const [mobileNavOpen, setMobileNavOpen] = appUseState(false);
   const [controlsOpen, setControlsOpen] = appUseState(true);
   const [editorOpen, setEditorOpen] = appUseState(false);
+  const [editMode] = appUseState(checkEditMode); // solo true con la palabra mágica en la URL
   const [recovery, setRecovery] = appUseState(null); // copia de seguridad recuperable
   const [, setDataVersion] = appUseState(0); // bump para forzar re-render tras editar
 
@@ -164,11 +181,13 @@ function App() {
         </div>
         {controlsOpen && (
           <>
+          {editMode && (
           <div className="ctrl-section">
             <button className="ctrl-edit-btn" onClick={() => setEditorOpen(true)}>
               ✏️ Editar historias
             </button>
           </div>
+          )}
           <div className="ctrl-section">
             <div className="ctrl-label">Color de fondo</div>
             <div className="ctrl-bgs">

@@ -8,7 +8,7 @@ const MESES = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'O
 
 // Reduce y comprime una imagen en el navegador → data URL (JPEG).
 // Acepta cualquier resolución/tamaño y la ajusta para que cargue rápido y quepa en localStorage.
-function resizeImageFile(file, maxDim = 1600, quality = 0.72) {
+function resizeImageFile(file, maxDim = 2000, quality = 0.82) {
   return new Promise((resolve, reject) => {
     if (!file || !file.type || !file.type.startsWith('image/')) {
       reject(new Error('El archivo no es una imagen.'));
@@ -26,6 +26,8 @@ function resizeImageFile(file, maxDim = 1600, quality = 0.72) {
         canvas.width = w;
         canvas.height = h;
         const ctx = canvas.getContext('2d');
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
         ctx.drawImage(img, 0, 0, w, h);
         try {
           resolve(canvas.toDataURL('image/jpeg', quality));
@@ -106,7 +108,7 @@ function AlbumPhotosField({ t, value, onChange }) {
     const imgs = [...files].filter(f => f.type && f.type.startsWith('image/'));
     if (!imgs.length) return;
     setBusy(b => b + imgs.length);
-    Promise.all(imgs.map(f => resizeImageFile(f, 1200, 0.68).catch(() => null)))
+    Promise.all(imgs.map(f => resizeImageFile(f, 2000, 0.82).catch(() => null)))
       .then(urls => {
         const ok = urls.filter(Boolean);
         onChange([...list, ...ok]);
@@ -236,6 +238,7 @@ function StoryEditor({ t, open, onClose, onChange }) {
   const [dirty, setDirty] = edUseState(false);
   const [savedFlash, setSavedFlash] = edUseState(false);
   const [confirmDelete, setConfirmDelete] = edUseState(false);
+  const [publishing, setPublishing] = edUseState(false);
   const fileInputRef = edUseRef(null);
 
   edUseEffect(() => {
@@ -330,6 +333,29 @@ function StoryEditor({ t, open, onClose, onChange }) {
     if (onChange) onChange();
   }
 
+  async function handlePublish() {
+    if (publishing) return;
+    setPublishing(true);
+    try {
+      const res = await window.BLOG_STORE.exportForPublish();
+      if (res) {
+        alert(
+          '¡Listo! ✅ Se ha descargado un archivo ZIP.\n\n' +
+          'Contiene:\n' +
+          '• data.js (tus ' + res.postCount + ' historias)\n' +
+          '• carpeta fotos (' + res.imgCount + ' foto(s) nueva(s) optimizada(s))\n\n' +
+          'Para publicar:\n' +
+          '1. Descomprime el ZIP.\n' +
+          '2. Sube su contenido a GitHub: reemplaza el data.js antiguo y mete las fotos en la carpeta fotos.\n' +
+          '3. Espera 1–2 min y abre la web con recarga forzada (Ctrl/Cmd + Shift + R).'
+        );
+      }
+    } catch (err) {
+      alert('No se pudo exportar: ' + (err && err.message ? err.message : err));
+    }
+    setPublishing(false);
+  }
+
   function handleImport(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -374,7 +400,11 @@ function StoryEditor({ t, open, onClose, onChange }) {
         .ed-badge.new { background: ${t.accent2}; color: white; }
         .ed-badge.edited { background: ${t.accent1}; color: white; }
         .ed-badge.seed { background: ${t.bgAlt}; color: ${t.textMuted}; }
-        .ed-side-foot { border-top: 1px solid ${t.line}; padding: 12px 14px; display:flex; gap: 8px; font-size: 11px; }
+        .ed-side-foot { border-top: 1px solid ${t.line}; padding: 12px 14px; display:flex; flex-direction: column; gap: 8px; font-size: 11px; }
+        .ed-side-foot-row { display:flex; gap: 8px; }
+        .ed-publish-btn { width: 100%; padding: 11px 12px; background: ${t.accent2}; border: 1px solid ${t.accent2}; border-radius: 9px; cursor: pointer; color: #fff; font-family: inherit; font-size: 13px; font-weight: 700; letter-spacing: .2px; transition: filter .15s ease; }
+        .ed-publish-btn:hover { filter: brightness(1.06); }
+        .ed-publish-btn:disabled { opacity: .6; cursor: default; }
         .ed-mini-btn { flex: 1; padding: 8px 10px; background: ${t.bgAlt}; border: 1px solid ${t.line}; border-radius: 8px; cursor: pointer; color: ${t.text}; font-family: inherit; font-size: 11px; font-weight: 500; }
         .ed-mini-btn:hover { background: ${t.line}; }
 
@@ -504,9 +534,14 @@ function StoryEditor({ t, open, onClose, onChange }) {
             })}
           </div>
           <div className="ed-side-foot">
-            <button className="ed-mini-btn" onClick={() => window.BLOG_STORE.exportJSON()} title="Descarga un JSON con todos tus cambios">↓ Backup</button>
-            <button className="ed-mini-btn" onClick={() => fileInputRef.current.click()} title="Carga un backup">↑ Importar</button>
-            <input ref={fileInputRef} type="file" accept="application/json" style={{ display: 'none' }} onChange={handleImport} />
+            <button className="ed-publish-btn" onClick={handlePublish} disabled={publishing} title="Genera el archivo listo para subir a GitHub">
+              {publishing ? 'Preparando…' : '📤 Exportar para publicar'}
+            </button>
+            <div className="ed-side-foot-row">
+              <button className="ed-mini-btn" onClick={() => window.BLOG_STORE.exportJSON()} title="Descarga un JSON con todos tus cambios">↓ Backup</button>
+              <button className="ed-mini-btn" onClick={() => fileInputRef.current.click()} title="Carga un backup">↑ Importar</button>
+              <input ref={fileInputRef} type="file" accept="application/json" style={{ display: 'none' }} onChange={handleImport} />
+            </div>
           </div>
         </div>
 

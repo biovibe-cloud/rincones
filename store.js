@@ -276,6 +276,68 @@
     } catch (e) { /* mejor esfuerzo */ }
   })();
 
+  // ──────────────────────────────────────────────────────────────
+  // EXPORTAR PARA PUBLICAR
+  // Genera un ZIP con:
+  //   • data.js  → todas las historias listas (sin fotos pesadas dentro)
+  //   • fotos/   → las fotos nuevas, como archivos .jpg optimizados
+  // El usuario sube ese contenido a GitHub y la web pública se actualiza.
+  // Las fotos que ya eran rutas ("fotos/...") se dejan tal cual.
+  async function exportForPublish() {
+    if (typeof JSZip === 'undefined') {
+      alert('Falta el componente para empaquetar. Recarga la página (Ctrl/Cmd + Shift + R) e inténtalo otra vez.');
+      return null;
+    }
+    const posts = buildPosts(); // historias efectivas: semilla + ediciones + nuevas
+    const zip = new JSZip();
+    const fotosDir = zip.folder('fotos');
+    let imgCount = 0;
+
+    // Convierte una foto incrustada (data:URL) en un archivo dentro de /fotos
+    // y devuelve su ruta. Si no es data:URL, devuelve null.
+    function fileFromDataUrl(dataUrl, baseName) {
+      const m = /^data:(image\/[a-z+]+);base64,(.*)$/i.exec(dataUrl || '');
+      if (!m) return null;
+      const ext = m[1] === 'image/png' ? 'png' : 'jpg';
+      const filename = baseName + '.' + ext;
+      fotosDir.file(filename, m[2], { base64: true });
+      imgCount++;
+      return 'fotos/' + filename;
+    }
+
+    const clean = posts.map(p => {
+      const post = { ...p };
+      if (post.coverImage && post.coverImage.startsWith('data:')) {
+        const path = fileFromDataUrl(post.coverImage, post.id + '-cover');
+        if (path) post.coverImage = path;
+      }
+      if (Array.isArray(post.album)) {
+        post.album = post.album.map((src, i) => {
+          if (src && src.startsWith('data:')) {
+            return fileFromDataUrl(src, post.id + '-alb-' + (i + 1)) || src;
+          }
+          return src;
+        });
+      }
+      return post;
+    });
+
+    const dataJs =
+      '// Datos del blog — contenido real horneado para publicar.\n' +
+      '// (Generado desde el editor. Las fotos están en la carpeta /fotos.)\n\n' +
+      'window.BLOG_DATA = ' + JSON.stringify({ posts: clean }, null, 2) + ';\n';
+    zip.file('data.js', dataJs);
+
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'publicar-' + new Date().toISOString().slice(0, 10) + '.zip';
+    a.click();
+    URL.revokeObjectURL(url);
+    return { imgCount, postCount: clean.length };
+  }
+
   window.BLOG_STORE = {
     savePost,
     deletePost,
@@ -283,6 +345,7 @@
     restorePost,
     exportJSON,
     importJSON,
+    exportForPublish,
     getMeta,
     isSeedPost,
     isEdited,

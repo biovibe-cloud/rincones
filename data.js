@@ -221,58 +221,6 @@ window.BLOG_DATA = {
         "fotos/cartagena-alb-5.jpg"
       ],
       "monthIdx": 4
-    },
-    {
-      "id": "cartagena",
-      "title": "Cartagena",
-      "subtitle": "La ciudad más Romantica de Colombia",
-      "country": "Colombia",
-      "region": "Costa atlantica",
-      "date": "Mayo 2010",
-      "dateShort": "MAY · 10",
-      "year": 2010,
-      "readMin": 5,
-      "photoCount": 0,
-      "tags": [
-        "América",
-        "Ciudad",
-        "Playa"
-      ],
-      "featured": true,
-      "coords": "10.39° N, 75.51° W",
-      "coverImage": "fotos/cartagena-cover.jpg",
-      "bodyIntro": "La ciudad perfecta para pasar un tiempo en pareja: Playa, mar, ambientes románticos, buena comida local, tranquilidad y descanso.",
-      "bodyParas": [
-        "Cartagena de Indias es sin duda la cuidad más turística de Colombia por que lo tiene todo, es un lugar con un encanto especial, un amigo dice que es mágica y tiene razón, por eso cuando queremos escaparnos, dedicarnos un tiempo y disfrutar en un ambiente acogedor frecuentemente escogemos esta ciudad."
-      ],
-      "places": [
-        {
-          "name": "Murallas de la cuidad",
-          "type": "Otro",
-          "town": "",
-          "note": ""
-        },
-        {
-          "name": "Plazas de la ciudad amurallada",
-          "type": "Caminata",
-          "town": "",
-          "note": "Para sentarse a compartir"
-        },
-        {
-          "name": "Convento de la Popa",
-          "type": "S. Religioso",
-          "town": "",
-          "note": ""
-        }
-      ],
-      "album": [
-        "fotos/cartagena-alb-1.jpg",
-        "fotos/cartagena-alb-2.jpg",
-        "fotos/cartagena-alb-3.jpg",
-        "fotos/cartagena-alb-4.jpg",
-        "fotos/cartagena-alb-5.jpg"
-      ],
-      "monthIdx": 4
     }
   ],
   "worldPins": [

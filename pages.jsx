@@ -174,8 +174,8 @@ function HistoriasPage({ t, nav }) {
       `}</style>
 
       <div className="om-h-head">
-        <div className="eb">Archivo · {DATA.posts.length} {DATA.posts.length === 1 ? 'entrada' : 'entradas'}</div>
-        <h1>Cada viaje, contado dos veces: en voz alta y por escrito.</h1>
+        <div className="eb">Cuaderno de recuerdos</div>
+        <h1>Cada viaje, contado dos veces: con los ojos y con el corazón.</h1>
         <p>Todas nuestras historias, ordenadas por fecha. Filtra por continente, tipo de viaje o ambiente. Cada una incluye mapa, lista de sitios y fotos.</p>
       </div>
 
@@ -560,7 +560,7 @@ function NosotrosPage({ t, nav }) {
 //   API_KEY  → tu clave de la API de Flickr (la que te dieron como "apiKey").
 //   ALBUM_ID → el id del álbum de Flickr que quieres mostrar.
 const MAPA_API_KEY = '8c7bd436cdbb43d21dccd254c4f13a8d';
-const MAPA_ALBUM_ID = '72157699212454140';
+const MAPA_ALBUM_ID = '72157625504631266';
 // ─────────────────────────────────────────────────────────────────────────
 const MAPA_BASE = 'https://biovibe-cloud.github.io/mapaFlickr-Codex/';
 
@@ -609,7 +609,7 @@ function MapaFotosPage({ t, nav }) {
 
       <div className="om-mapaf-head">
         <div>
-          <div className="eb">Mapa de fotos</div>
+          <div className="eb">Nuestro mundo</div>
           <h1>Cada foto, en el lugar donde la tomamos.</h1>
           <p>Nuestro mapa interactivo: explora las fotos geolocalizadas, muévete por el mundo y acércate a cada viaje.</p>
         </div>

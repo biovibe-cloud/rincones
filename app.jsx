@@ -59,7 +59,7 @@ function App() {
   const navItems = [
     { id: 'inicio', label: 'Inicio' },
     { id: 'historias', label: 'Historias' },
-    { id: 'mapa', label: 'Mapa' },
+    { id: 'mapa', label: 'Destinos' },
     { id: 'mapafotos', label: 'Mapa de fotos' },
     { id: 'nosotros', label: 'Nosotros' },
   ];

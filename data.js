@@ -187,7 +187,7 @@ window.BLOG_DATA = {
         "Playa"
       ],
       "featured": false,
-      "coords": "",
+      "coords": "10.39° N, 75.51° W",
       "coverImage": "fotos/cartagena-cover.jpg",
       "bodyIntro": "La ciudad perfecta para pasar un tiempo en pareja: Playa, mar, ambientes románticos, buena comida local, tranquilidad y descanso.",
       "bodyParas": [

@@ -333,10 +333,11 @@
       return post;
     });
 
+    const fullData = Object.assign({}, window.BLOG_DATA, { posts: clean });
     const dataJs =
       '// Datos del blog - contenido real horneado para publicar.\n' +
       '// (Generado desde el editor. Las fotos estan en la carpeta /fotos.)\n\n' +
-      'window.BLOG_DATA = ' + JSON.stringify({ posts: clean }, null, 2) + ';\n';
+      'window.BLOG_DATA = ' + JSON.stringify(fullData, null, 2) + ';\n';
     zip.file('data.js', dataJs);
 
     const blob = await zip.generateAsync({ type: 'blob' });

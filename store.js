@@ -276,18 +276,29 @@
     } catch (e) { /* mejor esfuerzo */ }
   })();
 
-  // ──────────────────────────────────────────────────────────────
+  // --------------------------------------------------------------
   // EXPORTAR PARA PUBLICAR
   // Genera un ZIP con:
-  //   • data.js  → todas las historias listas (sin fotos pesadas dentro)
-  //   • fotos/   → las fotos nuevas, como archivos .jpg optimizados
-  // El usuario sube ese contenido a GitHub y la web pública se actualiza.
+  //   - data.js  : todas las historias listas (sin fotos pesadas dentro)
+  //   - fotos/   : las fotos nuevas, como archivos .jpg optimizados
+  // El usuario sube ese contenido a GitHub y la web publica se actualiza.
   // Las fotos que ya eran rutas ("fotos/...") se dejan tal cual.
+
+  // Carga JSZip bajo demanda (solo cuando se pulsa el boton), para que la
+  // pagina publica no dependa de el. Devuelve una promesa.
+  function loadJSZip() {
+    return new Promise(function(resolve, reject) {
+      if (typeof JSZip !== 'undefined') { resolve(); return; }
+      var s = document.createElement('script');
+      s.src = 'https://unpkg.com/jszip@3.10.1/dist/jszip.min.js';
+      s.onload = function() { resolve(); };
+      s.onerror = function() { reject(new Error('No se pudo cargar el empaquetador. Revisa tu conexion.')); };
+      document.head.appendChild(s);
+    });
+  }
+
   async function exportForPublish() {
-    if (typeof JSZip === 'undefined') {
-      alert('Falta el componente para empaquetar. Recarga la página (Ctrl/Cmd + Shift + R) e inténtalo otra vez.');
-      return null;
-    }
+    await loadJSZip();
     const posts = buildPosts(); // historias efectivas: semilla + ediciones + nuevas
     const zip = new JSZip();
     const fotosDir = zip.folder('fotos');
@@ -323,8 +334,8 @@
     });
 
     const dataJs =
-      '// Datos del blog — contenido real horneado para publicar.\n' +
-      '// (Generado desde el editor. Las fotos están en la carpeta /fotos.)\n\n' +
+      '// Datos del blog - contenido real horneado para publicar.\n' +
+      '// (Generado desde el editor. Las fotos estan en la carpeta /fotos.)\n\n' +
       'window.BLOG_DATA = ' + JSON.stringify({ posts: clean }, null, 2) + ';\n';
     zip.file('data.js', dataJs);
 

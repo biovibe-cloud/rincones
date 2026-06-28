@@ -7,7 +7,7 @@
 //     ...rincones.rubenarcila.com/?editar=familia2026
 // El público nunca ve el botón. Cambia la palabra de abajo por la tuya
 // y guárdate el enlace completo en un sitio seguro.
-const EDIT_SECRET = 'dfrd_2026';
+const EDIT_SECRET = 'familia2026';
 function checkEditMode() {
   try {
     const params = new URLSearchParams(window.location.search);

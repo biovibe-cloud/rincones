@@ -340,14 +340,14 @@ function StoryEditor({ t, open, onClose, onChange }) {
       const res = await window.BLOG_STORE.exportForPublish();
       if (res) {
         alert(
-          '¡Listo! ✅ Se ha descargado un archivo ZIP.\n\n' +
+          '¡Listo! Se ha descargado un archivo ZIP.\n\n' +
           'Contiene:\n' +
-          '• data.js (tus ' + res.postCount + ' historias)\n' +
-          '• carpeta fotos (' + res.imgCount + ' foto(s) nueva(s) optimizada(s))\n\n' +
+          '- data.js (tus ' + res.postCount + ' historias)\n' +
+          '- carpeta fotos (' + res.imgCount + ' foto(s) nueva(s) optimizada(s))\n\n' +
           'Para publicar:\n' +
           '1. Descomprime el ZIP.\n' +
           '2. Sube su contenido a GitHub: reemplaza el data.js antiguo y mete las fotos en la carpeta fotos.\n' +
-          '3. Espera 1–2 min y abre la web con recarga forzada (Ctrl/Cmd + Shift + R).'
+          '3. Espera 1-2 min y abre la web con recarga forzada (Ctrl/Cmd + Shift + R).'
         );
       }
     } catch (err) {
@@ -535,7 +535,7 @@ function StoryEditor({ t, open, onClose, onChange }) {
           </div>
           <div className="ed-side-foot">
             <button className="ed-publish-btn" onClick={handlePublish} disabled={publishing} title="Genera el archivo listo para subir a GitHub">
-              {publishing ? 'Preparando…' : '📤 Exportar para publicar'}
+              {publishing ? 'Preparando...' : 'Exportar para publicar'}
             </button>
             <div className="ed-side-foot-row">
               <button className="ed-mini-btn" onClick={() => window.BLOG_STORE.exportJSON()} title="Descarga un JSON con todos tus cambios">↓ Backup</button>

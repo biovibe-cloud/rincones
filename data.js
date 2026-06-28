@@ -1,5 +1,5 @@
 // Datos del blog — contenido real horneado para publicar.
-// (Generado desde el contenido del editor. Las fotos están en la carpeta /fotos.)
+// (Generado desde el editor. Las fotos están en la carpeta /fotos.)
 
 window.BLOG_DATA = {
   "posts": [
@@ -41,45 +41,44 @@ window.BLOG_DATA = {
       "monthIdx": 3
     },
     {
-      "id": "marrakech",
-      "title": "Asia encantadora",
-      "subtitle": "Dos paises sorprendentes",
-      "country": "Cambodia y Tailandia",
-      "region": "Sur este asiatico",
-      "date": "Junio 2016",
-      "dateShort": "JUN · 16",
-      "year": 2016,
-      "readMin": 14,
-      "photoCount": 32,
+      "id": "vietnam",
+      "title": "Vietnam un Pais subvalorado por Holywood",
+      "subtitle": "De Hanoi a Hoi An con muchas preguntas.",
+      "country": "Vietnam",
+      "region": "Norte y centro",
+      "date": "Octubre 2025",
+      "dateShort": "OCT · 25",
+      "year": 2025,
+      "readMin": 22,
+      "photoCount": 61,
       "tags": [
-        "África",
-        "Ciudad",
-        "Familia",
         "Asia",
+        "Road trip",
+        "Familia",
+        "Pueblos",
         "Naturaleza"
       ],
-      "featured": true,
-      "coords": "31.63° N, 7.99° W",
-      "coverImage": "fotos/marrakech-cover.jpg",
-      "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
+      "featured": false,
+      "coords": "16.05° N, 108.21° E",
+      "coverImage": "fotos/vietnam-cover.jpg",
+      "bodyIntro": "Totalmente diferente a lo que las películas nos muestra",
       "bodyParas": [
-        "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma la comida asistencia en salud muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzarnos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
-        "Llegamos temprano en la mañana a Tailandia procedente de Londres. Hicimos un trámite rápido para conseguir visa temporal a Cambodia. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo Totalmente inesperado. Fue sorprendente porque no teníamos en nuestros planes visitar Cambodia. Sin embargo, en los últimos días antes de tomar el vuelo hacia Tailandia , algo conocimos sobre ese país que nos llamó la atención. Con una pequeña averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia desde nuestro país Colombia No era posible conseguirlo. Ya teníamos la visa para Tailandia pero decidimos averiguar y hacer el intento. Sorprendentemente en el mismo aeropuerto hay una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes otras visitas a diferentes países y el dinero suficiente, te dan una visa de visita rápida que simplemente es un pequeño documento que te permite entrar a Cambodia. Nosotros le damos un tiquete para continuar nuestro viaje, cambiamos el hotel de esa noche y tomamos un vuelo. Y en las horas de la tarde estábamos arribando al mundo . Ni siquiera lo habíamos pensado no teníamos una ruta definida sin embargo al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que llegamos a la capital y contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Bat. Muy sorprendentes estas ruinas más de 500 años de historia desconocidas para el occidente al menos para Estuvimos cinco días visitamos las grandes estructuras de Angkor Wat. Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son Son absolutamente amorosos con cada persona que llega, humildes sencillos generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. sorprendente de Cambodia. Después de unos días regresamos a la capital y tomamos nuestro vuelo hacia Tailandia. Llegamos a la parte norte tuve la inolvidable experiencia de pasar un día completo en un refugio para elefantes rescatados ,de alimentarlos cuidarlos conocerlos y la oportunidad de adentrarme en aguas bajas para acompañarlos en su proceso de baño y ayudarlos a bañar. Va a ser uno de los recuerdos más importantes de mi vida por esa cercanía con ese animal que tanto había querido conocer de cerca: la nobleza del elefante es similar a la de los camboyanos. Los siguientes días la pasamos visitando ruinas, palacios, estructuras doradas de la comida, de la gente y de la historia de Tailandia. Han sido de las vacaciones que más nos han cambiado como personas pero también de las que más nos ha sorprendido: de la diversidad de seres humanos, de los paisajes, de diversidad de mundos y de cómo los latinos nos parecemos a los asiáticos. Unos años después decidiríamos Y siempre venimos más sorprendidos que la vez anterior. Vale la pena conocer Tailandia y Campo de Janeiro."
+        ".Cuando uno se decide ir a Vietnam, la idea que tiene es la que ha captado por las películas de Hollywood. Unos pequeños hombres ojirrasgados que se esconden bajo el suelo para hacer el mal a los salvadores que vienen del occidente. Nada más alejado de la realidad. Vietnam es un país pujante fuerte y muy grande. Un hombre poderoso, que supo superar las vicisitudes y los estragos de una guerra larga prolongada contra un enemigo diez veces más poderoso que ellos. Hoy Vietnam a partir de tener una economía comunista es un país que progresa, que exporta y que tiene bellezas naturales increíbles para mostrar a los visitantes. Lo que más nos sorprendió es la atención, la organización de los diferentes sitios turísticos. La posibilidad La mansa de su gente, se nota que son tremendamente trabajadores. Entramos por el norte y lo primero que hicimos fue ir a conocer la bahía de Jalón, sitio espectacular del cual trajimos muchos Me gusta mucho cocinar. Esa fue una de las experiencias más enriquecedoras para ella. Luego nos dirigimos desde el norte hacia el sur transportándonos en parte en avión, en parte vía terrestre dándonos la posibilidad de conocer un país muy parecido a América Latina donde vivimos Colombia en cuanto a su geografía y su clima pero muy diferente en cuanto su cultura sus costumbres y su historia. En la parte del río Mekong almorzar en la casa de un poblador que preparó los alimentos en su propia cocina con leña y los ofreció con una generosidad que sorprende. Modernas. Lo que nos sorprendió porque la imagen que teníamos era de un país atrasado y con muchas dificultades. Vietnam sin duda es un viaje que valdría la pena volver a hacer."
       ],
       "places": [
         {
-          "name": "Angkor Wat",
-          "type": "Población",
+          "name": "Bahia de Ha Long",
+          "type": "Otro",
           "town": "",
-          "note": "500 años de historia "
+          "note": "PAaisaje increiblemente bello"
         }
       ],
       "album": [
-        "fotos/marrakech-alb-1.jpg",
-        "fotos/marrakech-alb-2.jpg",
-        "fotos/marrakech-alb-3.jpg"
+        "fotos/vietnam-alb-1.jpg",
+        "fotos/vietnam-alb-2.jpg",
+        "fotos/vietnam-alb-3.jpg"
       ],
-      "monthIdx": 5
+      "monthIdx": 9
     },
     {
       "id": "cinque-terre",
@@ -131,111 +130,97 @@ window.BLOG_DATA = {
       "monthIdx": 8
     },
     {
-      "id": "vietnam",
-      "title": "Vietnam un Pais subvalorado por Holywood",
-      "subtitle": "De Hanoi a Hoi An con muchas preguntas.",
-      "country": "Vietnam",
-      "region": "Norte y centro",
-      "date": "Octubre 2025",
-      "dateShort": "OCT · 25",
-      "year": 2025,
-      "readMin": 22,
-      "photoCount": 61,
+      "id": "marrakech",
+      "title": "Asia encantadora",
+      "subtitle": "Dos paises sorprendentes",
+      "country": "Cambodia y Tailandia",
+      "region": "Sur este asiatico",
+      "date": "Junio 2016",
+      "dateShort": "JUN · 16",
+      "year": 2016,
+      "readMin": 14,
+      "photoCount": 32,
       "tags": [
-        "Asia",
-        "Road trip",
+        "África",
+        "Ciudad",
         "Familia",
-        "Pueblos",
+        "Asia",
         "Naturaleza"
       ],
-      "featured": false,
-      "coords": "16.05° N, 108.21° E",
-      "coverImage": "fotos/vietnam-cover.jpg",
-      "bodyIntro": "Totalmente diferente a lo que las películas nos muestra",
+      "featured": true,
+      "coords": "31.63° N, 7.99° W",
+      "coverImage": "fotos/marrakech-cover.jpg",
+      "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
-        ".Cuando uno se decide ir a Vietnam, la idea que tiene es la que ha captado por las películas de Hollywood. Unos pequeños hombres ojirrasgados que se esconden bajo el suelo para hacer el mal a los salvadores que vienen del occidente. Nada más alejado de la realidad. Vietnam es un país pujante fuerte y muy grande. Un hombre poderoso, que supo superar las vicisitudes y los estragos de una guerra larga prolongada contra un enemigo diez veces más poderoso que ellos. Hoy Vietnam a partir de tener una economía comunista es un país que progresa, que exporta y que tiene bellezas naturales increíbles para mostrar a los visitantes. Lo que más nos sorprendió es la atención, la organización de los diferentes sitios turísticos. La posibilidad La mansa de su gente, se nota que son tremendamente trabajadores. Entramos por el norte y lo primero que hicimos fue ir a conocer la bahía de Jalón, sitio espectacular del cual trajimos muchos Me gusta mucho cocinar. Esa fue una de las experiencias más enriquecedoras para ella. Luego nos dirigimos desde el norte hacia el sur transportándonos en parte en avión, en parte vía terrestre dándonos la posibilidad de conocer un país muy parecido a América Latina donde vivimos Colombia en cuanto a su geografía y su clima pero muy diferente en cuanto su cultura sus costumbres y su historia. En la parte del río Mekong almorzar en la casa de un poblador que preparó los alimentos en su propia cocina con leña y los ofreció con una generosidad que sorprende. Modernas. Lo que nos sorprendió porque la imagen que teníamos era de un país atrasado y con muchas dificultades. Vietnam sin duda es un viaje que valdría la pena volver a hacer."
+        "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma la comida asistencia en salud muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzarnos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
+        "Llegamos temprano en la mañana a Tailandia procedente de Londres. Hicimos un trámite rápido para conseguir visa temporal a Cambodia. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo Totalmente inesperado. Fue sorprendente porque no teníamos en nuestros planes visitar Cambodia. Sin embargo, en los últimos días antes de tomar el vuelo hacia Tailandia , algo conocimos sobre ese país que nos llamó la atención. Con una pequeña averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia desde nuestro país Colombia No era posible conseguirlo. Ya teníamos la visa para Tailandia pero decidimos averiguar y hacer el intento. Sorprendentemente en el mismo aeropuerto hay una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes otras visitas a diferentes países y el dinero suficiente, te dan una visa de visita rápida que simplemente es un pequeño documento que te permite entrar a Cambodia. Nosotros le damos un tiquete para continuar nuestro viaje, cambiamos el hotel de esa noche y tomamos un vuelo. Y en las horas de la tarde estábamos arribando al mundo . Ni siquiera lo habíamos pensado no teníamos una ruta definida sin embargo al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que llegamos a la capital y contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Bat. Muy sorprendentes estas ruinas más de 500 años de historia desconocidas para el occidente al menos para Estuvimos cinco días visitamos las grandes estructuras de Angkor Wat. Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son Son absolutamente amorosos con cada persona que llega, humildes sencillos generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. sorprendente de Cambodia. Después de unos días regresamos a la capital y tomamos nuestro vuelo hacia Tailandia. Llegamos a la parte norte tuve la inolvidable experiencia de pasar un día completo en un refugio para elefantes rescatados ,de alimentarlos cuidarlos conocerlos y la oportunidad de adentrarme en aguas bajas para acompañarlos en su proceso de baño y ayudarlos a bañar. Va a ser uno de los recuerdos más importantes de mi vida por esa cercanía con ese animal que tanto había querido conocer de cerca: la nobleza del elefante es similar a la de los camboyanos. Los siguientes días la pasamos visitando ruinas, palacios, estructuras doradas de la comida, de la gente y de la historia de Tailandia. Han sido de las vacaciones que más nos han cambiado como personas pero también de las que más nos ha sorprendido: de la diversidad de seres humanos, de los paisajes, de diversidad de mundos y de cómo los latinos nos parecemos a los asiáticos. Unos años después decidiríamos Y siempre venimos más sorprendidos que la vez anterior. Vale la pena conocer Tailandia y Campo de Janeiro."
       ],
       "places": [
         {
-          "name": "Bahia de Ha Long",
-          "type": "Otro",
+          "name": "Angkor Wat",
+          "type": "Población",
           "town": "",
-          "note": "PAaisaje increiblemente bello"
+          "note": "500 años de historia "
         }
       ],
       "album": [
-        "fotos/vietnam-alb-1.jpg",
-        "fotos/vietnam-alb-2.jpg",
-        "fotos/vietnam-alb-3.jpg"
+        "fotos/marrakech-alb-1.jpg",
+        "fotos/marrakech-alb-2.jpg",
+        "fotos/marrakech-alb-3.jpg"
       ],
-      "monthIdx": 9
+      "monthIdx": 5
+    },
+    {
+      "id": "cartagena",
+      "title": "Cartagena",
+      "subtitle": "La ciudad Romantica de Colombia",
+      "country": "Colombia",
+      "region": "Costa atlantica",
+      "date": "Mayo 2010",
+      "dateShort": "MAY · 10",
+      "year": 2010,
+      "readMin": 5,
+      "photoCount": 0,
+      "tags": [
+        "América",
+        "Ciudad",
+        "Playa"
+      ],
+      "featured": false,
+      "coords": "",
+      "coverImage": "fotos/cartagena-cover.jpg",
+      "bodyIntro": "La ciudad perfecta para pasar un tiempo en pareja: Playa, mar, ambientes románticos, buena comida local, tranquilidad y descanso.",
+      "bodyParas": [
+        "Cartagena de Indias es sin duda la cuidad más turística de Colombia por que lo tiene todo, es un lugar con un encanto especial, un amigo dice que es mágica y tiene razón, por eso cuando queremos escaparnos, dedicarnos un tiempo y disfrutar en un ambiente acogedor frecuentemente escogemos esta ciudad."
+      ],
+      "places": [
+        {
+          "name": "Murallas de la cuidad",
+          "type": "Otro",
+          "town": "",
+          "note": ""
+        },
+        {
+          "name": "Plazas de la ciudad amurallada",
+          "type": "Caminata",
+          "town": "",
+          "note": "Para sentarse a compartir"
+        },
+        {
+          "name": "Convento de la Popa",
+          "type": "S. Religioso",
+          "town": "",
+          "note": ""
+        }
+      ],
+      "album": [
+        "fotos/cartagena-alb-1.jpg",
+        "fotos/cartagena-alb-2.jpg",
+        "fotos/cartagena-alb-3.jpg",
+        "fotos/cartagena-alb-4.jpg",
+        "fotos/cartagena-alb-5.jpg"
+      ],
+      "monthIdx": 4
     }
-  ],
-  "worldPins": [
-    {
-      "x": 45,
-      "y": 30,
-      "label": "Fátima, Portugal",
-      "id": "oporto"
-    },
-    {
-      "x": 24,
-      "y": 30,
-      "label": "Toronto, Canadá",
-      "id": "cinque-terre"
-    },
-    {
-      "x": 73,
-      "y": 45,
-      "label": "Tailandia y Camboya",
-      "id": "marrakech"
-    },
-    {
-      "x": 76,
-      "y": 46,
-      "label": "Vietnam",
-      "id": "vietnam"
-    }
-  ],
-  "wishlist": [
-    {
-      "name": "Egipto",
-      "sub": "Nuestro sueño sin cumplir",
-      "when": "Sueño",
-      "tag": "sueño"
-    },
-    {
-      "name": "Marruecos",
-      "sub": "Aplazado, por ahora",
-      "when": "En pausa",
-      "tag": "plan"
-    },
-    {
-      "name": "Safari en África",
-      "sub": "Algo que definitivamente debemos hacer",
-      "when": "Pendiente",
-      "tag": "sueño"
-    }
-  ],
-  "family": {
-    "name": "Ruben y Dora",
-    "intro": "Somos Ruben y Dora, amamos viajar y lo hacemos desde que estamos juntos. Viajamos mucho en pareja y, cuando podemos, con nuestros dos hijos.",
-    "members": [
-      {
-        "initial": "D",
-        "name": "Dora",
-        "note": "el alma de los viajes"
-      },
-      {
-        "initial": "R",
-        "name": "Ruben",
-        "note": "el de las fotos"
-      }
-    ],
-    "stats": {
-      "paises": 5,
-      "historias": 4,
-      "fotos": 15
-    }
-  }
+  ]
 };

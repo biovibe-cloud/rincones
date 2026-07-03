@@ -5,7 +5,7 @@ window.BLOG_DATA = {
   "posts": [
     {
       "id": "cambodia-cambodia",
-      "title": "Cambodia  CAMBODIA",
+      "title": "Asia encantadora",
       "subtitle": "Dos paises sorprendentes - Cambodia",
       "country": "Cambodia",
       "region": "Sur este asiatico",
@@ -25,7 +25,7 @@ window.BLOG_DATA = {
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
         "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma, la comida, asistencia en salud, muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzamos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
-        "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo Totalmente inesperado. Fue sorprendente porque nuestro plan era conocer Tailandia, un destino que ya en 2016 se destacaba en las guías muy bien promocionado. Pero en los últimos días antes de salir algo conocimos sobre Cambodia y nos llamó la atención pero ya teníamos la visa de una sola entrada a Tailandia y no quedaba tiempo para tramitar una nueva visa múltiple, con una averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia y poder entrar nuevamente a Tailandia pero era necesario hacerlo antes de pasar por inmigración así que decidimos hacer el intento. Sorprendentemente en el mismo aeropuerto encontramos una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes como justificar el cambio, te dan un permiso de re-entrada te permite seguir a Cambodia y presentarlos al reingresar a Tailandia. Con el permiso en mano tomamos un vuelo y en las horas de la noche estábamos arribando al mundo inesperado de Siem reap. Al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Wat, estuvimos 2 días recorriendo las sorprendentes ruinas, más de 500 años de historia del imperio Jemer desconocido por largo tiempo para el occidente y luego nos dirigimos a la capital Nom Pen donde pudimos conocer de su historia y la dolorosa que sufrieron en los años 60, una historia que como Colombianos no nos es ajena en la que hermanos del mismo país se sacrifican en luchas que no dejan mas que dolor y destrucción. Hoy afortunadamente el país se levanta y aunque carga con el debilitamiento económico que dejó años de guerra interna se sobrepone con esperanza de futuro prospero.",
+        "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo totalmente inesperado. Fue sorprendente porque nuestro plan era conocer Tailandia, un destino que ya en 2016 se destacaba en las guías muy bien promocionado. Pero en los últimos días antes de salir algo conocimos sobre Cambodia y nos llamó la atención pero ya teníamos la visa de una sola entrada a Tailandia y no quedaba tiempo para tramitar una nueva visa múltiple, con una averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia y poder entrar nuevamente a Tailandia pero era necesario hacerlo antes de pasar por inmigración así que decidimos hacer el intento. Sorprendentemente en el mismo aeropuerto encontramos una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes como justificar el cambio, te dan un permiso de re-entrada te permite seguir a Cambodia y presentarlos al reingresar a Tailandia. Con el permiso en mano tomamos un vuelo y en las horas de la noche estábamos arribando al mundo inesperado de Siem reap. Al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Wat, estuvimos 2 días recorriendo las sorprendentes ruinas, más de 500 años de historia del imperio Jemer desconocido por largo tiempo para el occidente y luego nos dirigimos a la capital Nom Pen donde pudimos conocer de su historia y la dolorosa que sufrieron en los años 60, una historia que como Colombianos no nos es ajena en la que hermanos del mismo país se sacrifican en luchas que no dejan mas que dolor y destrucción. Hoy afortunadamente el país se levanta y aunque carga con el debilitamiento económico que dejó años de guerra interna se sobrepone con esperanza de futuro prospero.",
         "Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son absolutamente amorosos con cada persona que llega, humildes, sencillos, generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. De allí viajamos de regreso a Changmai, en el norte de Tailandia a continuar nuestra aventura por primera vez en Asia,"
       ],
       "places": [
@@ -187,14 +187,25 @@ window.BLOG_DATA = {
       ],
       "featured": true,
       "coords": "13°46'25.6\"N 100°29'41.3\"E",
-      "coverImage": "",
+      "coverImage": "fotos/asia-encantadora-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
         "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto hacia Cambodia de donde llegamos 5 días después mucho mas inspirados de conocer este país tan extraño pero que nos resultaba tan interesante.",
         "Llegamos a la parte norte de Tailandia, tuve la inolvidable experiencia de pasar un día completo en un refugio para elefantes rescatados ,de alimentarlos cuidarlos conocerlos y la oportunidad de adentrarme en aguas bajas para acompañarlos en su proceso de baño y ayudarlos a bañar. Va a ser uno de los recuerdos más importantes de mi vida por esa cercanía con ese animal que tanto había querido conocer de cerca: la nobleza del elefante es similar a la de los camboyanos. Los siguientes días la pasamos visitando ruinas, palacios, estructuras doradas de la comida, de la gente y de la historia de Tailandia. Han sido de las vacaciones que más nos han cambiado como personas pero también de las que más nos ha sorprendido: de la diversidad de seres humanos, de los paisajes, de diversidad de mundos y de cómo los latinos nos parecemos a los asiáticos. Unos años después decidiríamos Y siempre venimos más sorprendidos que la vez anterior. Vale la pena conocer Tailandia."
       ],
-      "places": [],
-      "album": [],
+      "places": [
+        {
+          "name": "Baan Chang Elephant Park",
+          "type": "Otro",
+          "town": "Chang Mai",
+          "note": "Centro de rescate de Elefantes"
+        }
+      ],
+      "album": [
+        "fotos/asia-encantadora-alb-1.jpg",
+        "fotos/asia-encantadora-alb-2.jpg",
+        "fotos/asia-encantadora-alb-3.jpg"
+      ],
       "monthIdx": 6
     },
     {

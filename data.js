@@ -6,9 +6,9 @@ window.BLOG_DATA = {
     {
       "id": "cambodia-cambodia",
       "title": "Cambodia  CAMBODIA",
-      "subtitle": "Dos paises sorprendentes - Cambodia 2",
-      "country": "",
-      "region": "",
+      "subtitle": "Dos paises sorprendentes - Cambodia",
+      "country": "Cambodia",
+      "region": "Sur este asiatico",
       "date": "Julio 2026",
       "dateShort": "JUL · 26",
       "year": 2026,
@@ -19,9 +19,9 @@ window.BLOG_DATA = {
         "Ciudad",
         "Naturaleza"
       ],
-      "featured": false,
+      "featured": true,
       "coords": "13.41° N, 103.87° E",
-      "coverImage": "",
+      "coverImage": "fotos/cambodia-cambodia-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
         "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma, la comida, asistencia en salud, muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzamos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
@@ -32,11 +32,15 @@ window.BLOG_DATA = {
         {
           "name": "Angkor Wat",
           "type": "Comida",
-          "town": "",
-          "note": ""
+          "town": "Siem reap",
+          "note": "Ruinas de civilización de 500 años"
         }
       ],
-      "album": [],
+      "album": [
+        "fotos/cambodia-cambodia-alb-1.jpg",
+        "fotos/cambodia-cambodia-alb-2.jpg",
+        "fotos/cambodia-cambodia-alb-3.jpg"
+      ],
       "monthIdx": 6
     },
     {

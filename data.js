@@ -163,13 +163,12 @@ window.BLOG_DATA = {
       "subtitle": "Dos paises sorprendentes - Cambodia",
       "country": "Cambodia",
       "region": "Sur este asiatico",
-      "date": "Junio 2016",
-      "dateShort": "JUN · 16",
+      "date": "Julio 2016",
+      "dateShort": "JUL · 16",
       "year": 2016,
       "readMin": 14,
       "photoCount": 32,
       "tags": [
-        "África",
         "Ciudad",
         "Familia",
         "Asia",
@@ -201,7 +200,7 @@ window.BLOG_DATA = {
         "fotos/marrakech-alb-6.jpg",
         "fotos/marrakech-alb-7.jpg"
       ],
-      "monthIdx": 5
+      "monthIdx": 6
     },
     {
       "id": "cartagena",

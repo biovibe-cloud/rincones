@@ -264,7 +264,7 @@ window.BLOG_DATA = {
     },
     {
       "id": "pueblito-colonial-1",
-      "title": "Pueblito colonial 1",
+      "title": "Pueblito colonial",
       "subtitle": "Paseo de aniversario al pueblo colonial",
       "country": "Colombia",
       "region": "Villa de Leyva",

@@ -19,7 +19,7 @@ window.BLOG_DATA = {
         "Ciudad",
         "Naturaleza"
       ],
-      "featured": true,
+      "featured": false,
       "coords": "13.41° N, 103.87° E",
       "coverImage": "fotos/cambodia-cambodia-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",

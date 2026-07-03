@@ -114,7 +114,7 @@ window.BLOG_DATA = {
         }
       ],
       "album": [
-        "fotos/vietnam-alb-3.jpg",
+        "fotos/vietnam-alb-1.jpg",
         "fotos/vietnam-alb-2.jpg",
         "fotos/vietnam-alb-3.jpg",
         "fotos/vietnam-alb-4.jpg"

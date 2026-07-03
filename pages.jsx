@@ -11,15 +11,39 @@ const { useState, useEffect } = React;
 const CONTINENT_TAGS = ['Europa', 'Asia', 'África', 'América', 'Oceanía'];
 const TAG_ORDER = ['Europa', 'Asia', 'África', 'América', 'Oceanía', 'Road trip', 'Ciudad', 'Playa', 'Naturaleza', 'Familia', 'Pueblos'];
 
-// Lee unas coordenadas tipo "41.16° N, 8.63° W" y devuelve {lat, lon}.
+// Lee coordenadas en varios formatos habituales y devuelve {lat, lon}:
+//   "41.16° N, 8.63° W"                    (decimal + coma)
+//   "13°46'25.6\"N 100°29'41.3\"E"          (grados/minutos/segundos)
 function parseCoords(str) {
   if (!str) return null;
-  const m = String(str).match(/(-?[\d.]+)\s*°?\s*([NS])?\s*[,;]\s*(-?[\d.]+)\s*°?\s*([EW])?/i);
-  if (!m) return null;
-  let lat = parseFloat(m[1]); if (m[2] && /s/i.test(m[2])) lat = -Math.abs(lat);
-  let lon = parseFloat(m[3]); if (m[4] && /w/i.test(m[4])) lon = -Math.abs(lon);
-  if (isNaN(lat) || isNaN(lon)) return null;
-  return { lat, lon };
+  const s = String(str).trim();
+  // Formato decimal con coma: "41.16° N, 8.63° W"
+  let m = s.match(/(-?[\d.]+)\s*°?\s*([NS])?\s*[,;]\s*(-?[\d.]+)\s*°?\s*([EW])?/i);
+  if (m) {
+    let lat = parseFloat(m[1]); if (m[2] && /s/i.test(m[2])) lat = -Math.abs(lat);
+    let lon = parseFloat(m[3]); if (m[4] && /w/i.test(m[4])) lon = -Math.abs(lon);
+    if (!isNaN(lat) && !isNaN(lon)) return { lat, lon };
+  }
+  // Formato grados/minutos/segundos: 13°46'25.6"N 100°29'41.3"E
+  const dms = /(-?[\d.]+)°\s*(?:(\d+(?:\.\d+)?)['’]\s*(?:(\d+(?:\.\d+)?)["”])?)?\s*([NSEW])/gi;
+  const found = [...s.matchAll(dms)];
+  if (found.length >= 2) {
+    function toDecimal(g) {
+      const deg = parseFloat(g[1]) || 0;
+      const min = parseFloat(g[2]) || 0;
+      const sec = parseFloat(g[3]) || 0;
+      const dir = g[4].toUpperCase();
+      let val = deg + min / 60 + sec / 3600;
+      if (dir === 'S' || dir === 'W') val = -val;
+      return { val, dir };
+    }
+    const a = toDecimal(found[0]);
+    const b = toDecimal(found[1]);
+    const lat = (a.dir === 'N' || a.dir === 'S') ? a.val : b.val;
+    const lon = (a.dir === 'E' || a.dir === 'W') ? a.val : b.val;
+    return { lat, lon };
+  }
+  return null;
 }
 // Proyecta lat/lon a la posicion (x,y en %) sobre el mapa estilizado.
 function projectToMap(lat, lon) {

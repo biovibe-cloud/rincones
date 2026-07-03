@@ -383,14 +383,14 @@ function StoryEditor({ t, open, onClose, onChange }) {
         .ed-modal { background: ${t.bg}; ${t.bgImage ? `background-image: ${t.bgImage}; background-size: ${t.bgSize};` : ''} border: 1px solid ${t.line}; border-radius: 16px; width: 100%; max-width: 1100px; height: 100%; max-height: 760px; display:grid; grid-template-columns: 320px 1fr; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.4); color: ${t.text}; }
 
         /* Sidebar */
-        .ed-side { background: ${t.paper}; border-right: 1px solid ${t.line}; display:flex; flex-direction: column; }
+        .ed-side { background: ${t.paper}; border-right: 1px solid ${t.line}; display:flex; flex-direction: column; min-height: 0; }
         .ed-side-head { padding: 18px 20px; border-bottom: 1px solid ${t.line}; display:flex; align-items:center; justify-content: space-between; }
         .ed-side-head h3 { margin: 0; font-family: ${t.fontDisplay}; font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
         .ed-x { width: 30px; height: 30px; border-radius: 8px; background: ${t.bgAlt}; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size: 18px; color: ${t.text}; line-height: 1; border: none; }
         .ed-x:hover { background: ${t.line}; }
         .ed-new-btn { margin: 14px 16px; padding: 12px 16px; background: ${t.accent2}; color: white; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; display:flex; align-items:center; gap: 8px; justify-content: center; }
         .ed-new-btn:hover { filter: brightness(1.05); }
-        .ed-list { flex: 1; overflow-y: auto; padding: 4px 8px 16px; }
+        .ed-list { flex: 1; overflow-y: auto; padding: 4px 8px 16px; min-height: 0; }
         .ed-list-item { padding: 12px 14px; border-radius: 10px; cursor: pointer; margin-bottom: 2px; display:flex; flex-direction: column; gap: 3px; border: 1px solid transparent; }
         .ed-list-item:hover { background: ${t.bgAlt}; }
         .ed-list-item.active { background: ${t.bgAlt}; border-color: ${t.line}; }

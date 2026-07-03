@@ -82,7 +82,7 @@ window.BLOG_DATA = {
     },
     {
       "id": "vietnam",
-      "title": "Vietnam un Pais subvalorado por Holywood",
+      "title": "Vietnam un país subvalorado por Holywood",
       "subtitle": "De Hanoi a Hoi An con muchas preguntas.",
       "country": "Vietnam",
       "region": "Norte y centro",
@@ -114,9 +114,10 @@ window.BLOG_DATA = {
         }
       ],
       "album": [
-        "fotos/vietnam-alb-1.jpg",
+        "fotos/vietnam-alb-3.jpg",
         "fotos/vietnam-alb-2.jpg",
-        "fotos/vietnam-alb-3.jpg"
+        "fotos/vietnam-alb-3.jpg",
+        "fotos/vietnam-alb-4.jpg"
       ],
       "monthIdx": 9
     },

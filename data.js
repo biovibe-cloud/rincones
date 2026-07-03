@@ -130,10 +130,38 @@ window.BLOG_DATA = {
       "monthIdx": 8
     },
     {
+      "id": "asia-encantadora",
+      "title": "Asia encantadora",
+      "subtitle": "Dos paises sorprendentes - Tailandia",
+      "country": "Tailandia",
+      "region": "Sur este asiatico",
+      "date": "Julio 2016",
+      "dateShort": "JUL · 16",
+      "year": 2016,
+      "readMin": 5,
+      "photoCount": 0,
+      "tags": [
+        "Asia",
+        "Ciudad",
+        "Naturaleza"
+      ],
+      "featured": true,
+      "coords": "13°46'25.6\"N 100°29'41.3\"E",
+      "coverImage": "",
+      "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
+      "bodyParas": [
+        "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto hacia Cambodia de donde llegamos 5 días después mucho mas inspirados de conocer este país tan extraño pero que nos resultaba tan interesante.",
+        "Llegamos a la parte norte de Tailandia, tuve la inolvidable experiencia de pasar un día completo en un refugio para elefantes rescatados ,de alimentarlos cuidarlos conocerlos y la oportunidad de adentrarme en aguas bajas para acompañarlos en su proceso de baño y ayudarlos a bañar. Va a ser uno de los recuerdos más importantes de mi vida por esa cercanía con ese animal que tanto había querido conocer de cerca: la nobleza del elefante es similar a la de los camboyanos. Los siguientes días la pasamos visitando ruinas, palacios, estructuras doradas de la comida, de la gente y de la historia de Tailandia. Han sido de las vacaciones que más nos han cambiado como personas pero también de las que más nos ha sorprendido: de la diversidad de seres humanos, de los paisajes, de diversidad de mundos y de cómo los latinos nos parecemos a los asiáticos. Unos años después decidiríamos Y siempre venimos más sorprendidos que la vez anterior. Vale la pena conocer Tailandia."
+      ],
+      "places": [],
+      "album": [],
+      "monthIdx": 6
+    },
+    {
       "id": "marrakech",
       "title": "Asia encantadora",
-      "subtitle": "Dos paises sorprendentes",
-      "country": "Cambodia y Tailandia",
+      "subtitle": "Dos paises sorprendentes - Cambodia",
+      "country": "Cambodia",
       "region": "Sur este asiatico",
       "date": "Junio 2016",
       "dateShort": "JUN · 16",
@@ -147,13 +175,14 @@ window.BLOG_DATA = {
         "Asia",
         "Naturaleza"
       ],
-      "featured": false,
+      "featured": true,
       "coords": "13.41° N, 103.87° E",
       "coverImage": "fotos/marrakech-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
-        "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma la comida asistencia en salud muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzarnos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
-        "Llegamos temprano en la mañana a Tailandia procedente de Londres. Hicimos un trámite rápido para conseguir visa temporal a Cambodia. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo Totalmente inesperado. Fue sorprendente porque no teníamos en nuestros planes visitar Cambodia. Sin embargo, en los últimos días antes de tomar el vuelo hacia Tailandia , algo conocimos sobre ese país que nos llamó la atención. Con una pequeña averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia desde nuestro país Colombia No era posible conseguirlo. Ya teníamos la visa para Tailandia pero decidimos averiguar y hacer el intento. Sorprendentemente en el mismo aeropuerto hay una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes otras visitas a diferentes países y el dinero suficiente, te dan una visa de visita rápida que simplemente es un pequeño documento que te permite entrar a Cambodia. Nosotros le damos un tiquete para continuar nuestro viaje, cambiamos el hotel de esa noche y tomamos un vuelo. Y en las horas de la tarde estábamos arribando al mundo . Ni siquiera lo habíamos pensado no teníamos una ruta definida sin embargo al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que llegamos a la capital y contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Bat. Muy sorprendentes estas ruinas más de 500 años de historia desconocidas para el occidente al menos para Estuvimos cinco días visitamos las grandes estructuras de Angkor Wat. Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son Son absolutamente amorosos con cada persona que llega, humildes sencillos generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. sorprendente de Cambodia. Después de unos días regresamos a la capital y tomamos nuestro vuelo hacia Tailandia. Llegamos a la parte norte tuve la inolvidable experiencia de pasar un día completo en un refugio para elefantes rescatados ,de alimentarlos cuidarlos conocerlos y la oportunidad de adentrarme en aguas bajas para acompañarlos en su proceso de baño y ayudarlos a bañar. Va a ser uno de los recuerdos más importantes de mi vida por esa cercanía con ese animal que tanto había querido conocer de cerca: la nobleza del elefante es similar a la de los camboyanos. Los siguientes días la pasamos visitando ruinas, palacios, estructuras doradas de la comida, de la gente y de la historia de Tailandia. Han sido de las vacaciones que más nos han cambiado como personas pero también de las que más nos ha sorprendido: de la diversidad de seres humanos, de los paisajes, de diversidad de mundos y de cómo los latinos nos parecemos a los asiáticos. Unos años después decidiríamos Y siempre venimos más sorprendidos que la vez anterior. Vale la pena conocer Tailandia y Campo de Janeiro."
+        "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma, la comida, asistencia en salud, muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzamos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
+        "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo Totalmente inesperado. Fue sorprendente porque nuestro plan era conocer Tailandia, un destino que ya en 2016 se destacaba en las guías muy bien promocionado. Pero en los últimos días antes de salir algo conocimos sobre Cambodia y nos llamó la atención pero ya teníamos la visa de una sola entrada a Tailandia y no quedaba tiempo para tramitar una nueva visa múltiple, con una averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia y poder entrar nuevamente a Tailandia pero era necesario hacerlo antes de pasar por inmigración así que decidimos hacer el intento. Sorprendentemente en el mismo aeropuerto encontramos una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes como justificar el cambio, te dan un permiso de re-entrada te permite seguir a Cambodia y presentarlos al reingresar a Tailandia. Con el permiso en mano tomamos un vuelo y en las horas de la noche estábamos arribando al mundo inesperado de Siem reap. Al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Wat, estuvimos 2 días recorriendo las sorprendentes ruinas, más de 500 años de historia del imperio Jemer desconocido por largo tiempo para el occidente y luego nos dirigimos a la capital Nom Pen donde pudimos conocer de su historia y la dolorosa que sufrieron en los años 60, una historia que como Colombianos no nos es ajena en la que hermanos del mismo país se sacrifican en luchas que no dejan mas que dolor y destrucción. Hoy afortunadamente el país se levanta y aunque carga con el debilitamiento económico que dejó años de guerra interna se sobrepone con esperanza de futuro prospero.",
+        "Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son absolutamente amorosos con cada persona que llega, humildes, sencillos, generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. De allí viajamos de regreso a Changmai, en el norte de Tailandia a continuar nuestra aventura por primera vez en Asia,"
       ],
       "places": [
         {
@@ -166,7 +195,11 @@ window.BLOG_DATA = {
       "album": [
         "fotos/marrakech-alb-1.jpg",
         "fotos/marrakech-alb-2.jpg",
-        "fotos/marrakech-alb-3.jpg"
+        "fotos/marrakech-alb-3.jpg",
+        "fotos/marrakech-alb-4.jpg",
+        "fotos/marrakech-alb-5.jpg",
+        "fotos/marrakech-alb-6.jpg",
+        "fotos/marrakech-alb-7.jpg"
       ],
       "monthIdx": 5
     },

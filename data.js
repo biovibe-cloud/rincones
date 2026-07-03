@@ -261,6 +261,38 @@ window.BLOG_DATA = {
         "fotos/cartagena-alb-5.jpg"
       ],
       "monthIdx": 4
+    },
+    {
+      "id": "pueblito-colonial-1",
+      "title": "Pueblito colonial 1",
+      "subtitle": "Paseo de aniversario al pueblo colonial",
+      "country": "Colombia",
+      "region": "Villa de Leyva",
+      "date": "Agosto 2007",
+      "dateShort": "AGO · 07",
+      "year": 2007,
+      "readMin": 5,
+      "photoCount": 0,
+      "tags": [
+        "América",
+        "Pueblos",
+        "Naturaleza"
+      ],
+      "featured": false,
+      "coords": "5°38'01.5\"N 73°31'25.1\"W",
+      "coverImage": "fotos/pueblito-colonial-1-cover.jpg",
+      "bodyIntro": "Celebramos un aniversario mas en este pueblito herencia de nuestro pasado español",
+      "bodyParas": [
+        "Nos gusta pasar nuestros aniversarios viajando a lugares especiales, que tengan encanto y magia para celebrar el momento en que decidimos compartir la vida.",
+        "Esta vez no fue la excepción, Villa de Leyva es un pequeño pueblo de la epoca de la colonia, en algun momento fue centro politico de nuestro país pero sobre todo sus plazas y calles invitan al recogimiento, y  a pasar algunos días tranquilos caminando disfrutando del paisaje."
+      ],
+      "places": [],
+      "album": [
+        "fotos/pueblito-colonial-1-alb-1.jpg",
+        "fotos/pueblito-colonial-1-alb-2.jpg",
+        "fotos/pueblito-colonial-1-alb-3.jpg"
+      ],
+      "monthIdx": 7
     }
   ],
   "worldPins": [

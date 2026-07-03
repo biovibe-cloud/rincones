@@ -31,7 +31,7 @@ window.BLOG_DATA = {
       "places": [
         {
           "name": "Angkor Wat",
-          "type": "Comida",
+          "type": "Otro",
           "town": "Siem reap",
           "note": "Ruinas de civilización de 500 años"
         }
@@ -204,7 +204,8 @@ window.BLOG_DATA = {
       "album": [
         "fotos/asia-encantadora-alb-1.jpg",
         "fotos/asia-encantadora-alb-2.jpg",
-        "fotos/asia-encantadora-alb-3.jpg"
+        "fotos/asia-encantadora-alb-3.jpg",
+        "fotos/asia-encantadora-alb-4.jpg"
       ],
       "monthIdx": 6
     },

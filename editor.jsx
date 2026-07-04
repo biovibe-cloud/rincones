@@ -165,8 +165,8 @@ function emptyPost() {
     monthIdx: new Date().getMonth(),
     year: new Date().getFullYear(),
     readMin: 5,
-    photoCount: 0,
     tags: [],
+    travelers: 'Los dos',
     featured: false,
     coords: '',
     coverImage: '',
@@ -218,8 +218,8 @@ function formToPost(form, existingId) {
     dateShort,
     year: Number(form.year),
     readMin: Number(form.readMin) || 5,
-    photoCount: Number(form.photoCount) || 0,
     tags: form.tags,
+    travelers: form.travelers || 'Los dos',
     featured: !!form.featured,
     coords: form.coords.trim(),
     coverImage: form.coverImage || '',
@@ -239,11 +239,14 @@ function StoryEditor({ t, open, onClose, onChange }) {
   const [savedFlash, setSavedFlash] = edUseState(false);
   const [confirmDelete, setConfirmDelete] = edUseState(false);
   const [publishing, setPublishing] = edUseState(false);
+  const [searchQ, setSearchQ] = edUseState('');
+  const [sortMode, setSortMode] = edUseState('natural'); // 'natural' | 'anio'
   const fileInputRef = edUseRef(null);
 
   edUseEffect(() => {
     if (open) {
       setAllPosts([...window.BLOG_DATA.posts]);
+      setSearchQ('');
     }
   }, [open]);
 
@@ -390,6 +393,14 @@ function StoryEditor({ t, open, onClose, onChange }) {
         .ed-x:hover { background: ${t.line}; }
         .ed-new-btn { margin: 14px 16px; padding: 12px 16px; background: ${t.accent2}; color: white; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; display:flex; align-items:center; gap: 8px; justify-content: center; }
         .ed-new-btn:hover { filter: brightness(1.05); }
+        .ed-sort-toggle { display:flex; gap: 6px; margin: 0 16px 10px; background: ${t.bgAlt}; padding: 3px; border-radius: 9px; }
+        .ed-sort-toggle button { flex:1; padding: 6px 8px; border:none; background: transparent; border-radius: 7px; font-size: 12px; font-weight: 600; color: ${t.textMuted}; cursor: pointer; font-family: inherit; }
+        .ed-sort-toggle button.on { background: ${t.card}; color: ${t.text}; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+        .ed-search-wrap { position: relative; margin: 0 16px 10px; }
+        .ed-search-icon { position:absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 12px; opacity: .5; pointer-events: none; }
+        .ed-search-input { width: 100%; padding: 9px 12px 9px 30px; border-radius: 9px; border: 1px solid ${t.line}; background: ${t.card}; font-size: 13px; font-family: inherit; color: ${t.text}; box-sizing: border-box; }
+        .ed-search-input:focus { outline: none; border-color: ${t.accent1}; }
+        .ed-search-empty { padding: 24px 16px; text-align:center; font-size: 12px; color: ${t.textMuted}; }
         .ed-list { flex: 1; overflow-y: auto; padding: 4px 8px 16px; min-height: 0; }
         .ed-list-item { padding: 12px 14px; border-radius: 10px; cursor: pointer; margin-bottom: 2px; display:flex; flex-direction: column; gap: 3px; border: 1px solid transparent; }
         .ed-list-item:hover { background: ${t.bgAlt}; }
@@ -505,6 +516,19 @@ function StoryEditor({ t, open, onClose, onChange }) {
             <button className="ed-x" onClick={onClose}>×</button>
           </div>
           <button className="ed-new-btn" onClick={() => setSelectedId(null)}>+ Nueva historia</button>
+          <div className="ed-sort-toggle">
+            <button className={sortMode === 'natural' ? 'on' : ''} onClick={() => setSortMode('natural')}>Recientes</button>
+            <button className={sortMode === 'anio' ? 'on' : ''} onClick={() => setSortMode('anio')}>Por año</button>
+          </div>
+          <div className="ed-search-wrap">
+            <span className="ed-search-icon">🔍</span>
+            <input
+              className="ed-search-input"
+              placeholder="Buscar por título, país o año…"
+              value={searchQ}
+              onChange={e => setSearchQ(e.target.value)}
+            />
+          </div>
           <div className="ed-list">
             <div
               className={`ed-list-item ${selectedId === null ? 'active' : ''}`}
@@ -514,7 +538,23 @@ function StoryEditor({ t, open, onClose, onChange }) {
               <div className="ed-list-title">+ Crear nueva</div>
               <div className="ed-list-sub">Empezar de cero</div>
             </div>
-            {allPosts.map(p => {
+            {allPosts
+              .slice()
+              .sort((a, b) => {
+                if (sortMode !== 'anio') return 0; // 'natural' ya viene en el orden correcto desde el store
+                const ya = a.year || 0, yb = b.year || 0;
+                if (yb !== ya) return yb - ya;
+                return (b.monthIdx || 0) - (a.monthIdx || 0);
+              })
+              .filter(p => {
+                const q = searchQ.trim().toLowerCase();
+                if (!q) return true;
+                return (p.title || '').toLowerCase().includes(q) ||
+                       (p.country || '').toLowerCase().includes(q) ||
+                       (p.date || '').toLowerCase().includes(q) ||
+                       String(p.year || '').includes(q);
+              })
+              .map(p => {
               const isSeedPost = window.BLOG_STORE.isSeedPost(p.id);
               const wasEdited = window.BLOG_STORE.isEdited(p.id);
               return (
@@ -532,6 +572,15 @@ function StoryEditor({ t, open, onClose, onChange }) {
                 </div>
               );
             })}
+            {searchQ.trim() && allPosts.filter(p => {
+              const q = searchQ.trim().toLowerCase();
+              return (p.title || '').toLowerCase().includes(q) ||
+                     (p.country || '').toLowerCase().includes(q) ||
+                     (p.date || '').toLowerCase().includes(q) ||
+                     String(p.year || '').includes(q);
+            }).length === 0 && (
+              <div className="ed-search-empty">Sin resultados para “{searchQ}”.</div>
+            )}
           </div>
           <div className="ed-side-foot">
             <button className="ed-publish-btn" onClick={handlePublish} disabled={publishing} title="Genera el archivo listo para subir a GitHub">
@@ -618,8 +667,10 @@ function StoryEditor({ t, open, onClose, onChange }) {
                 <input className="ed-input" type="number" value={form.readMin} onChange={e => update('readMin', e.target.value)} />
               </div>
               <div className="ed-field">
-                <label className="ed-label">Nº de fotos</label>
-                <input className="ed-input" type="number" value={form.photoCount} onChange={e => update('photoCount', e.target.value)} />
+                <label className="ed-label">Quiénes</label>
+                <select className="ed-select" value={form.travelers} onChange={e => update('travelers', e.target.value)}>
+                  {['Dora', 'Ruben', 'Los dos', 'Los cuatro', 'Familia y Amigos'].map(o => <option key={o}>{o}</option>)}
+                </select>
               </div>
             </div>
             <div className="ed-row cols2">

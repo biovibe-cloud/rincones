@@ -13,13 +13,13 @@ window.BLOG_DATA = {
       "dateShort": "JUL · 26",
       "year": 2026,
       "readMin": 5,
-      "photoCount": 0,
       "tags": [
         "Asia",
         "Ciudad",
         "Naturaleza"
       ],
       "featured": false,
+      "travelers": "Los dos",
       "coords": "13.41° N, 103.87° E",
       "coverImage": "fotos/cambodia-cambodia-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
@@ -53,12 +53,12 @@ window.BLOG_DATA = {
       "dateShort": "ABR · 26",
       "year": 2026,
       "readMin": 7,
-      "photoCount": 18,
       "tags": [
         "Europa",
         "Ciudad"
       ],
       "featured": false,
+      "travelers": "Los dos",
       "coords": "41.16° N, 8.63° W",
       "coverImage": "fotos/oporto-cover.jpg",
       "bodyIntro": "País encantador que merece segunda visita",
@@ -90,7 +90,6 @@ window.BLOG_DATA = {
       "dateShort": "OCT · 25",
       "year": 2025,
       "readMin": 22,
-      "photoCount": 61,
       "tags": [
         "Asia",
         "Road trip",
@@ -99,6 +98,7 @@ window.BLOG_DATA = {
         "Naturaleza"
       ],
       "featured": false,
+      "travelers": "Los dos",
       "coords": "16.05° N, 108.21° E",
       "coverImage": "fotos/vietnam-cover.jpg",
       "bodyIntro": "Totalmente diferente a lo que las películas nos muestra",
@@ -131,13 +131,13 @@ window.BLOG_DATA = {
       "dateShort": "SEP · 25",
       "year": 2025,
       "readMin": 12,
-      "photoCount": 24,
       "tags": [
         "Pueblos",
         "América",
         "Naturaleza"
       ],
       "featured": false,
+      "travelers": "Los dos",
       "coords": "43.65° N, 79.38° W",
       "coverImage": "fotos/cinque-terre-cover.jpg",
       "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",
@@ -180,13 +180,13 @@ window.BLOG_DATA = {
       "dateShort": "JUL · 16",
       "year": 2016,
       "readMin": 5,
-      "photoCount": 0,
       "tags": [
         "Asia",
         "Ciudad",
         "Naturaleza"
       ],
       "featured": true,
+      "travelers": "Los dos",
       "coords": "13°46'25.6\"N 100°29'41.3\"E",
       "coverImage": "fotos/asia-encantadora-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
@@ -220,13 +220,13 @@ window.BLOG_DATA = {
       "dateShort": "MAY · 10",
       "year": 2010,
       "readMin": 5,
-      "photoCount": 0,
       "tags": [
         "América",
         "Ciudad",
         "Playa"
       ],
       "featured": false,
+      "travelers": "Los dos",
       "coords": "10.39° N, 75.51° W",
       "coverImage": "fotos/cartagena-cover.jpg",
       "bodyIntro": "La ciudad perfecta para pasar un tiempo en pareja: Playa, mar, ambientes románticos, buena comida local, tranquilidad y descanso.",
@@ -272,13 +272,13 @@ window.BLOG_DATA = {
       "dateShort": "AGO · 07",
       "year": 2007,
       "readMin": 5,
-      "photoCount": 0,
       "tags": [
         "América",
         "Pueblos",
         "Naturaleza"
       ],
       "featured": false,
+      "travelers": "Los dos",
       "coords": "5°38'01.5\"N 73°31'25.1\"W",
       "coverImage": "fotos/pueblito-colonial-1-cover.jpg",
       "bodyIntro": "Celebramos un aniversario mas en este pueblito herencia de nuestro pasado español",
@@ -355,11 +355,6 @@ window.BLOG_DATA = {
         "name": "Ruben",
         "note": "el de las fotos"
       }
-    ],
-    "stats": {
-      "paises": 5,
-      "historias": 4,
-      "fotos": 15
-    }
+    ]
   }
 };

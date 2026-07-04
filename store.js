@@ -79,6 +79,41 @@
     return found >= 0 ? found : 0;
   }
 
+  // ----- Orden natural (creado/editado más reciente primero) -----
+  // A cada post le corresponden dos fechas internas:
+  //   createdAt -> se fija una sola vez, al crearse, y nunca cambia.
+  //   updatedAt -> se actualiza cada vez que se guarda (crear o editar).
+  // Regla de orden: la historia con el createdAt más alto (la última CREADA)
+  // siempre va de primera. El resto se ordena por updatedAt (creada o editada
+  // más recientemente primero), sin adelantar nunca a la última creada.
+
+  // Para las historias que todavía no tienen createdAt/updatedAt (las que ya
+  // existían antes de este sistema), les damos un punto de partida estable:
+  // orden alfabético por título. Se recalcula igual cada vez, así que es
+  // consistente entre sesiones y navegadores mientras no se toquen.
+  function ensureTimestamps(posts) {
+    const missing = posts.filter(p => typeof p.createdAt !== 'number');
+    if (missing.length === 0) return;
+    const sortedMissing = [...missing].sort((a, b) => (a.title || '').localeCompare(b.title || '', 'es'));
+    sortedMissing.forEach((p, i) => {
+      const synthetic = sortedMissing.length - i; // el primero alfabéticamente obtiene el valor más alto
+      p.createdAt = synthetic;
+      p.updatedAt = synthetic;
+    });
+  }
+
+  function naturalSort(posts) {
+    if (!posts.length) return posts;
+    let topIdx = 0;
+    for (let i = 1; i < posts.length; i++) {
+      if ((posts[i].createdAt || 0) > (posts[topIdx].createdAt || 0)) topIdx = i;
+    }
+    const top = posts[topIdx];
+    const rest = posts.filter((_, i) => i !== topIdx);
+    rest.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0) || (b.createdAt || 0) - (a.createdAt || 0));
+    return [top, ...rest];
+  }
+
   // Construye la lista efectiva de posts mezclando seeds + overrides + created - deleted
   function buildPosts() {
     const overlay = loadOverlay();
@@ -87,12 +122,8 @@
       .map(p => overlay.edited[p.id] ? { ...p, ...overlay.edited[p.id] } : p);
     const created = overlay.created || [];
     const all = [...created, ...seeds].map(p => ({ ...p, monthIdx: deriveMonthIdx(p) }));
-    // Ordena por año desc, luego mes desc
-    return all.sort((a, b) => {
-      const ya = a.year || 0, yb = b.year || 0;
-      if (yb !== ya) return yb - ya;
-      return (b.monthIdx || 0) - (a.monthIdx || 0);
-    });
+    ensureTimestamps(all);
+    return naturalSort(all);
   }
 
   // Refresca window.BLOG_DATA.posts (para que las páginas lo lean al renderizar)
@@ -106,6 +137,14 @@
   function savePost(post) {
     const overlay = loadOverlay();
     const isSeed = SEED_POSTS.some(p => p.id === post.id);
+
+    // Marca de tiempo: si la historia ya existía, conserva su createdAt original
+    // (para no perder su lugar como "creada hace tiempo"); si es nueva, nace ahora.
+    // updatedAt siempre se actualiza a este mismo instante.
+    const existing = (window.BLOG_DATA.posts || []).find(p => p.id === post.id);
+    const now = Date.now();
+    post.createdAt = (existing && typeof existing.createdAt === 'number') ? existing.createdAt : now;
+    post.updatedAt = now;
 
     if (isSeed) {
       // Edición de una semilla

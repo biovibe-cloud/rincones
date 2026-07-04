@@ -70,6 +70,22 @@ function deriveStats(posts) {
   posts.forEach(p => (p.tags || []).forEach(tg => { if (CONTINENT_TAGS.includes(tg)) continentes.add(tg); }));
   return { paises, historias: posts.length, fotos, continentes: continentes.size };
 }
+// Lugares para el mapa de Destinos, ordenados alfabéticamente por país; si el
+// país se repite, se distingue con la región/zona del viaje.
+function deriveSortedPlaces(posts) {
+  const items = posts.map(p => {
+    const c = parseCoords(p.coords);
+    if (!c) return null;
+    return { id: p.id, country: (p.country || p.title || '').trim(), region: (p.region || '').trim() };
+  }).filter(Boolean);
+  items.sort((a, b) => a.country.localeCompare(b.country, 'es') || a.region.localeCompare(b.region, 'es'));
+  const counts = {};
+  items.forEach(it => { counts[it.country] = (counts[it.country] || 0) + 1; });
+  return items.map(it => ({
+    id: it.id,
+    label: counts[it.country] > 1 ? `${it.country} — ${it.region || 'sin región'}` : it.country
+  }));
+}
 // Etiquetas para los filtros = solo las que de verdad usa alguna historia.
 function deriveTagFilters(posts) {
   const present = new Set();
@@ -254,7 +270,7 @@ function HistoriasPage({ t, nav }) {
       <div className="om-h-head">
         <div className="eb">Cuaderno de recuerdos</div>
         <h1>Cada viaje, contado dos veces: con los ojos y con el corazón.</h1>
-        <p>Todas nuestras historias, ordenadas por fecha. Filtra por continente, tipo de viaje o ambiente. Cada una incluye mapa, lista de sitios y fotos.</p>
+        <p>Todas nuestras historias, para explorar y filtrar. Filtra por continente, tipo de viaje o ambiente. Cada una incluye mapa, lista de sitios y fotos.</p>
       </div>
 
       <div className="om-filters">
@@ -377,7 +393,7 @@ function PostPage({ t, nav, postId }) {
             <h4>Datos del viaje</h4>
             <div className="om-place"><div className="name">Cuándo</div><div className="note">{post.date}</div></div>
             <div className="om-place"><div className="name">Dónde</div><div className="note">{post.region}, {post.country}</div></div>
-            <div className="om-place"><div className="name">Quiénes</div><div className="note">Los cuatro</div></div>
+            <div className="om-place"><div className="name">Quiénes</div><div className="note">{post.travelers || 'Los dos'}</div></div>
             <div className="om-place"><div className="name">Fotos</div><div className="note">{album ? album.length : post.photoCount} en el álbum</div></div>
           </div>
           {places.length > 0 && (
@@ -511,14 +527,14 @@ function MapaPage({ t, nav }) {
           <div className="om-m-side-card">
             <h4>Lugares en el mapa</h4>
             <div className="om-m-pin-list">
-              {mapaPins.map((p, i) => (
+              {deriveSortedPlaces(DATA.posts).map((p, i) => (
                 <div
                   key={i}
-                  className={`om-m-pin-item ${p.future ? 'future' : ''}`}
+                  className="om-m-pin-item"
                   onClick={() => p.id && nav('post', p.id)}
                 >
                   <span>{p.label}</span>
-                  <span className="when">{p.future ? 'prox.' : '✓'}</span>
+                  <span className="when">✓</span>
                 </div>
               ))}
             </div>

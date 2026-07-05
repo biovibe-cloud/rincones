@@ -34,7 +34,7 @@ function App() {
   const styleId = 'A'; // Fijado: Mediterráneo
   const [bgKey, setBgKey] = appUseState('crema');
   const [page, setPage] = appUseState('inicio'); // inicio, historias, post, mapa, nosotros
-  const [postId, setPostId] = appUseState('cinque-terre');
+  const [postId, setPostId] = appUseState('004-cinque-terre');
   const [mobileNavOpen, setMobileNavOpen] = appUseState(false);
   const [controlsOpen, setControlsOpen] = appUseState(true);
   const [editorOpen, setEditorOpen] = appUseState(false);

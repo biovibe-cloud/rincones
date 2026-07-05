@@ -4,7 +4,7 @@
 window.BLOG_DATA = {
   "posts": [
     {
-      "id": "cambodia-cambodia",
+      "id": "001-cambodia-cambodia",
       "title": "Asia encantadora",
       "subtitle": "Dos paises sorprendentes - Cambodia",
       "country": "Cambodia",
@@ -21,7 +21,7 @@ window.BLOG_DATA = {
       "featured": false,
       "travelers": "Los dos",
       "coords": "13.41° N, 103.87° E",
-      "coverImage": "fotos/cambodia-cambodia-cover.jpg",
+      "coverImage": "fotos/001-cambodia-cambodia-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
         "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma, la comida, asistencia en salud, muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzamos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
@@ -37,14 +37,14 @@ window.BLOG_DATA = {
         }
       ],
       "album": [
-        "fotos/cambodia-cambodia-alb-1.jpg",
-        "fotos/cambodia-cambodia-alb-2.jpg",
-        "fotos/cambodia-cambodia-alb-3.jpg"
+        "fotos/001-cambodia-cambodia-alb-1.jpg",
+        "fotos/001-cambodia-cambodia-alb-2.jpg",
+        "fotos/001-cambodia-cambodia-alb-3.jpg"
       ],
       "monthIdx": 6
     },
     {
-      "id": "oporto",
+      "id": "006-oporto",
       "title": "Tres días de azulejos, pasteles y vino del Duero",
       "subtitle": "Oporto se camina sin prisa. Es la única regla del lugar",
       "country": "Portugal",
@@ -60,7 +60,7 @@ window.BLOG_DATA = {
       "featured": false,
       "travelers": "Los dos",
       "coords": "41.16° N, 8.63° W",
-      "coverImage": "fotos/oporto-cover.jpg",
+      "coverImage": "fotos/006-oporto-cover.jpg",
       "bodyIntro": "País encantador que merece segunda visita",
       "bodyParas": [
         "El viaje a Portugal comenzó de una manera interesante decidimos hacerla por tren desde Madrid España, viaje nocturno en cabina privada para dormir se me hizo algo pesado pero sigue siendo una experiencia diferente, llegamos muy de la madrugada a Lisboa de allí buscar el hotel y una sorpresa muy bonita una ciudad agradable un buen clima lo que se repetiría durante todo el viaje sin duda la comida y la bebida ha sido de los experiencias más agradables que hemos tenido en nuestros viajes siempre viajar con la esposa Es agradable tener tiempo para compartir para cenar para soñar y Portugal es un sitio muy adecuado de Lisboa salimos con rumbo Norte durante 8 días para llegar al límite a la frontera en el norte y pasar a Santiago de Compostela hicimos parada en el santuario de la Virgen me lo corto y tuvimos un día muy divertido que nos llegó a pasear en un carro descapotado"
@@ -74,14 +74,14 @@ window.BLOG_DATA = {
         }
       ],
       "album": [
-        "fotos/oporto-alb-1.jpg",
-        "fotos/oporto-alb-2.jpg",
-        "fotos/oporto-alb-3.jpg"
+        "fotos/006-oporto-alb-1.jpg",
+        "fotos/006-oporto-alb-2.jpg",
+        "fotos/006-oporto-alb-3.jpg"
       ],
       "monthIdx": 3
     },
     {
-      "id": "vietnam",
+      "id": "007-vietnam",
       "title": "Vietnam un país subvalorado por Holywood",
       "subtitle": "De Hanoi a Hoi An con muchas preguntas.",
       "country": "Vietnam",
@@ -100,7 +100,7 @@ window.BLOG_DATA = {
       "featured": false,
       "travelers": "Los dos",
       "coords": "16.05° N, 108.21° E",
-      "coverImage": "fotos/vietnam-cover.jpg",
+      "coverImage": "fotos/007-vietnam-cover.jpg",
       "bodyIntro": "Totalmente diferente a lo que las películas nos muestra",
       "bodyParas": [
         ".Cuando uno se decide ir a Vietnam, la idea que tiene es la que ha captado por las películas de Hollywood. Unos pequeños hombres ojirrasgados que se esconden bajo el suelo para hacer el mal a los salvadores que vienen del occidente. Nada más alejado de la realidad. Vietnam es un país pujante fuerte y muy grande. Un hombre poderoso, que supo superar las vicisitudes y los estragos de una guerra larga prolongada contra un enemigo diez veces más poderoso que ellos. Hoy Vietnam a partir de tener una economía comunista es un país que progresa, que exporta y que tiene bellezas naturales increíbles para mostrar a los visitantes. Lo que más nos sorprendió es la atención, la organización de los diferentes sitios turísticos. La posibilidad La mansa de su gente, se nota que son tremendamente trabajadores. Entramos por el norte y lo primero que hicimos fue ir a conocer la bahía de Jalón, sitio espectacular del cual trajimos muchos Me gusta mucho cocinar. Esa fue una de las experiencias más enriquecedoras para ella. Luego nos dirigimos desde el norte hacia el sur transportándonos en parte en avión, en parte vía terrestre dándonos la posibilidad de conocer un país muy parecido a América Latina donde vivimos Colombia en cuanto a su geografía y su clima pero muy diferente en cuanto su cultura sus costumbres y su historia. En la parte del río Mekong almorzar en la casa de un poblador que preparó los alimentos en su propia cocina con leña y los ofreció con una generosidad que sorprende. Modernas. Lo que nos sorprendió porque la imagen que teníamos era de un país atrasado y con muchas dificultades. Vietnam sin duda es un viaje que valdría la pena volver a hacer."
@@ -114,15 +114,15 @@ window.BLOG_DATA = {
         }
       ],
       "album": [
-        "fotos/vietnam-alb-1.jpg",
-        "fotos/vietnam-alb-2.jpg",
-        "fotos/vietnam-alb-3.jpg",
-        "fotos/vietnam-alb-4.jpg"
+        "fotos/007-vietnam-alb-1.jpg",
+        "fotos/007-vietnam-alb-2.jpg",
+        "fotos/007-vietnam-alb-3.jpg",
+        "fotos/007-vietnam-alb-4.jpg"
       ],
       "monthIdx": 9
     },
     {
-      "id": "cinque-terre",
+      "id": "004-cinque-terre",
       "title": "El placer de viajar con amigos",
       "subtitle": "Una semana caminando conociendo Canada con un grupo de extraordinarios amigos",
       "country": "Canada",
@@ -139,7 +139,7 @@ window.BLOG_DATA = {
       "featured": false,
       "travelers": "Con Amigos",
       "coords": "43.65° N, 79.38° W",
-      "coverImage": "fotos/cinque-terre-cover.jpg",
+      "coverImage": "fotos/004-cinque-terre-cover.jpg",
       "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",
       "bodyParas": [
         "En 2017 tuvimos la gran oportunidad de compartir con algunos amigos momentos extraordinarios visitando Canadá. Ha sido uno de los viajes más placenteros que hemos podido tener: las risas, Los buenos momentos , la buena vibra ,la alegría pero el conocimiento , la actitud ante la vida , la generosidad para enseñar y los momentos sencillos caminando por calles de Canadá son de los recuerdos más extraordinarios que podemos tener. Vamos a tener. Arribamos a Toronto donde quedamos de encontrarnos y el líder del viaje nos citó en un hotel muy bonito. Fuimos entrando uno a uno al lobby para ser recibidos con caluroso abrazo de nuestros amigos. Descansamos un rato y luego salimos a cenar. Tuvimos la posibilidad de compartir en una taberna reírnos tomar fotos contar historias. Y cada uno enriquecer a los demás con su buena vibra. Al día siguiente nos dirigimos a las Cataratas del Niágara, ese esplendoroso lugar que sólo habíamos visto en fotografías y del que teníamos la impresión de que sería algo majestuoso lo que encontraríamos. Pero Y la posibilidad de compartir con personas exitosas que hacen su vida cada vez mejor y que día a día trabajan para hacer la vida de los demás mucho mejor. Los momentos de las fotos, la camaradería que disfrutamos esos días nos permitieron tener uno de los viajes más fantásticos que hemos tenido. Marzo en el hemisferio norte es uno de los momentos más agradables para visitar. Se está saliendo del invierno y los árboles comienzan a cambiar de color, a reverdecer. El clima es frío pero suave. Los paisajes todavía con nieve. Para nosotros los latinos siempre ha sido un gran atractivo caminar por calles congeladas, disfrutar en pequeños restaurantes calentados artificialmente la luz para tomar fotografías espectaculares. Esos son los ingredientes que nos permitieron disfrutar mucho del paisaje, del ambiente y del clima. Estuvimos en Toronto varios días y luego nos separamos de nuestros amigos y nos dirigimos hacia Vancouver, corrección, hacia Quebec. Este ya fue un viaje de pareja a una ciudad de México. Con una zona mucho más fría , con mucha más nieve en donde pudimos caminar de la mano, disfrutar cada uno del otro, aventurarnos un poco en zonas congeladas, visitar un hotel de nieve, tomar un trago con parte de las paredes del lugar. Y como siempre disfrutar de la compañía mutua. Después de varios días nos regresamos en tren para posteriormente regresar a Colombia. Ha sido otro de esos viajes esplendorosos que la vida nos regala."
@@ -165,13 +165,13 @@ window.BLOG_DATA = {
         }
       ],
       "album": [
-        "fotos/cinque-terre-alb-1.jpg",
-        "fotos/cinque-terre-alb-2.jpg"
+        "fotos/004-cinque-terre-alb-1.jpg",
+        "fotos/004-cinque-terre-alb-2.jpg"
       ],
       "monthIdx": 8
     },
     {
-      "id": "asia-encantadora",
+      "id": "002-asia-encantadora",
       "title": "Asia encantadora",
       "subtitle": "Dos paises sorprendentes - Tailandia",
       "country": "Tailandia",
@@ -188,7 +188,7 @@ window.BLOG_DATA = {
       "featured": true,
       "travelers": "Los dos",
       "coords": "13°46'25.6\"N 100°29'41.3\"E",
-      "coverImage": "fotos/asia-encantadora-cover.jpg",
+      "coverImage": "fotos/002-asia-encantadora-cover.jpg",
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
         "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto hacia Cambodia de donde llegamos 5 días después mucho mas inspirados de conocer este país tan extraño pero que nos resultaba tan interesante.",
@@ -203,15 +203,15 @@ window.BLOG_DATA = {
         }
       ],
       "album": [
-        "fotos/asia-encantadora-alb-1.jpg",
-        "fotos/asia-encantadora-alb-2.jpg",
-        "fotos/asia-encantadora-alb-3.jpg",
-        "fotos/asia-encantadora-alb-4.jpg"
+        "fotos/002-asia-encantadora-alb-1.jpg",
+        "fotos/002-asia-encantadora-alb-2.jpg",
+        "fotos/002-asia-encantadora-alb-3.jpg",
+        "fotos/002-asia-encantadora-alb-4.jpg"
       ],
       "monthIdx": 6
     },
     {
-      "id": "cartagena",
+      "id": "003-cartagena",
       "title": "Cartagena",
       "subtitle": "La ciudad más Romantica de Colombia",
       "country": "Colombia",
@@ -228,7 +228,7 @@ window.BLOG_DATA = {
       "featured": false,
       "travelers": "Los dos",
       "coords": "10.39° N, 75.51° W",
-      "coverImage": "fotos/cartagena-cover.jpg",
+      "coverImage": "fotos/003-cartagena-cover.jpg",
       "bodyIntro": "La ciudad perfecta para pasar un tiempo en pareja: Playa, mar, ambientes románticos, buena comida local, tranquilidad y descanso.",
       "bodyParas": [
         "Cartagena de Indias es sin duda la cuidad más turística de Colombia por que lo tiene todo, es un lugar con un encanto especial, un amigo dice que es mágica y tiene razón, por eso cuando queremos escaparnos, dedicarnos un tiempo y disfrutar en un ambiente acogedor frecuentemente escogemos esta ciudad."
@@ -254,16 +254,16 @@ window.BLOG_DATA = {
         }
       ],
       "album": [
-        "fotos/cartagena-alb-1.jpg",
-        "fotos/cartagena-alb-2.jpg",
-        "fotos/cartagena-alb-3.jpg",
-        "fotos/cartagena-alb-4.jpg",
-        "fotos/cartagena-alb-5.jpg"
+        "fotos/003-cartagena-alb-1.jpg",
+        "fotos/003-cartagena-alb-2.jpg",
+        "fotos/003-cartagena-alb-3.jpg",
+        "fotos/003-cartagena-alb-4.jpg",
+        "fotos/003-cartagena-alb-5.jpg"
       ],
       "monthIdx": 4
     },
     {
-      "id": "pueblito-colonial-1",
+      "id": "005-pueblito-colonial-1",
       "title": "Pueblito colonial",
       "subtitle": "Paseo de aniversario al pueblo colonial",
       "country": "Colombia",
@@ -280,7 +280,7 @@ window.BLOG_DATA = {
       "featured": false,
       "travelers": "Los dos",
       "coords": "5°38'01.5\"N 73°31'25.1\"W",
-      "coverImage": "fotos/pueblito-colonial-1-cover.jpg",
+      "coverImage": "fotos/005-pueblito-colonial-1-cover.jpg",
       "bodyIntro": "Celebramos un aniversario mas en este pueblito herencia de nuestro pasado español",
       "bodyParas": [
         "Nos gusta pasar nuestros aniversarios viajando a lugares especiales, que tengan encanto y magia para celebrar el momento en que decidimos compartir la vida.",
@@ -288,37 +288,11 @@ window.BLOG_DATA = {
       ],
       "places": [],
       "album": [
-        "fotos/pueblito-colonial-1-alb-1.jpg",
-        "fotos/pueblito-colonial-1-alb-2.jpg",
-        "fotos/pueblito-colonial-1-alb-3.jpg"
+        "fotos/005-pueblito-colonial-1-alb-1.jpg",
+        "fotos/005-pueblito-colonial-1-alb-2.jpg",
+        "fotos/005-pueblito-colonial-1-alb-3.jpg"
       ],
       "monthIdx": 7
-    }
-  ],
-  "worldPins": [
-    {
-      "x": 45,
-      "y": 30,
-      "label": "Fátima, Portugal",
-      "id": "oporto"
-    },
-    {
-      "x": 24,
-      "y": 30,
-      "label": "Toronto, Canadá",
-      "id": "cinque-terre"
-    },
-    {
-      "x": 73,
-      "y": 45,
-      "label": "Tailandia y Camboya",
-      "id": "marrakech"
-    },
-    {
-      "x": 76,
-      "y": 46,
-      "label": "Vietnam",
-      "id": "vietnam"
     }
   ],
   "wishlist": [
@@ -341,6 +315,7 @@ window.BLOG_DATA = {
       "tag": "sueño"
     }
   ],
+  "nextStoryNumber": 8,
   "family": {
     "name": "Ruben y Dora",
     "intro": "Somos Ruben y Dora, amamos viajar y lo hacemos desde que estamos juntos. Viajamos mucho en pareja y, cuando podemos, con nuestros dos hijos.",

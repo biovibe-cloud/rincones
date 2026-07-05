@@ -1,6 +1,6 @@
 # Rincones — El viaje de la vida
 
-Blog de viajes familiar: un sitio sencillo y bonito para compartir historias con amigos y familia, y guardar recuerdos. Hecho con cariño 🧡
+Blog de viajes de la familia Ruben y Dora: un sitio sencillo y bonito para compartir historias con amigos y familia, y guardar recuerdos. Hecho con cariño 🧡
 
 🌐 **En vivo:** https://rincones.rubenarcila.com/
 
@@ -10,14 +10,14 @@ Blog de viajes familiar: un sitio sencillo y bonito para compartir historias con
 
 Una web tipo revista, en español, con estas páginas:
 
-- **Inicio** — historia destacada + presentación.
-- **Historias** — todas las entradas, con filtros por continente, tipo de viaje y ambiente.
+- **Inicio** — historia destacada (elegida a mano) + "Más historias" + resumen del mapa.
+- **Historias** — todas las entradas, con buscador y filtros por continente, tipo de viaje y ambiente.
 - **Historia individual** — texto largo, datos del viaje, sitios visitados, mapa de la ruta y álbum de fotos.
-- **Destinos** — mapamundi con los lugares visitados.
+- **Destinos** — mapamundi con los lugares visitados + lista alfabética por país (si un país se repite, se distingue por región).
 - **Mapa de fotos** — mapa interactivo con las fotos geolocalizadas (app externa embebida).
 - **Nosotros** — quiénes somos y lista de deseos de viajes.
 
-Incluye un **editor dentro de la propia web** (botón "✏️ Editar historias") para crear y modificar entradas sin tocar el código. Los cambios se guardan en el navegador (localStorage) y se pueden exportar/importar como copia de seguridad en JSON.
+Incluye un **editor privado dentro de la propia web** (botón "✏️ Editar historias", solo visible añadiendo `?editar=CLAVE` al final de la URL) para crear y modificar entradas sin tocar el código. Los cambios se guardan en el navegador (localStorage); desde el editor se genera un ZIP listo para subir a GitHub y publicar de verdad.
 
 ---
 
@@ -44,14 +44,24 @@ Luego abre `http://localhost:8000` en el navegador.
 | Archivo | Para qué sirve |
 |---|---|
 | `index.html` | Punto de entrada. Carga las fuentes, React y todos los scripts. |
-| `data.js` | Historias de ejemplo (los datos iniciales del blog). |
-| `store.js` | Capa de guardado en el navegador (localStorage) + copia de seguridad. |
+| `data.js` | Las historias reales (`window.BLOG_DATA`: posts, wishlist, family, contador de identificadores). |
+| `store.js` | Capa de guardado en el navegador (localStorage): mezcla de historias, orden natural, generación de identificadores, exportar para publicar. |
 | `themes.jsx` | Colores, fondos y tipografía (estilo "Mediterráneo"). |
 | `shared.jsx` | Piezas reutilizables: tarjetas, mapamundi, cabeceras. |
-| `pages.jsx` | Las páginas del sitio (Inicio, Historias, etc.). |
-| `editor.jsx` | El editor de historias dentro de la web. |
-| `app.jsx` | Estructura general: menú, navegación y panel de control. |
+| `pages.jsx` | Las páginas del sitio (Inicio, Historias, Destinos, etc.). |
+| `editor.jsx` | El editor privado de historias dentro de la web. |
+| `app.jsx` | Estructura general: menú, navegación, panel de control y modo edición privado. |
 | `fotos/` | Imágenes del blog. |
+
+---
+
+## Identificador de cada historia
+
+Cada historia tiene un identificador único con un **número consecutivo al comienzo** (ej. `007-vietnam`). Ese número:
+
+- Nunca se repite, ni siquiera si la historia se elimina más adelante (el contador solo sube).
+- Se guarda en `data.js` (campo `nextStoryNumber`) y se actualiza automáticamente al crear una historia nueva desde el editor.
+- Los nombres de las fotos de cada historia siguen el mismo identificador (ej. `fotos/007-vietnam-cover.jpg`, `fotos/007-vietnam-alb-1.jpg`), así que **nunca chocan entre sí** aunque dos historias tengan un título parecido.
 
 ---
 
@@ -63,7 +73,7 @@ El sitio está pensado para GitHub Pages:
 2. En **Settings → Pages**, elige la rama y la carpeta que contiene `index.html`.
 3. Espera 1–2 minutos y entra a la dirección que te da GitHub.
 
-> Tras actualizar, si no ves los cambios, haz una **recarga forzada**: `Ctrl + Shift + R` (Windows) o `Cmd + Shift + R` (Mac).
+> Tras actualizar, si no ves los cambios, haz una **recarga forzada**: `Ctrl + Shift + R` (Windows) o `Cmd + Shift + R` (Mac). Es, con diferencia, la causa más común de "no se ven mis cambios".
 
 ---
 
@@ -78,6 +88,6 @@ La página "Mapa de fotos" embebe una app externa (un mapa con las fotos de Flic
 ## Notas
 
 - **Idioma:** español.
-- **Contenido actual:** de ejemplo (familia y viajes ficticios) hasta poner el contenido real.
+- **Contenido:** real, de la familia (no es contenido de ejemplo).
 - **Fuentes:** Manrope (Google Fonts).
 - Proyecto personal/familiar. 🌍

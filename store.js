@@ -35,16 +35,17 @@
   function loadOverlay() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return { edited: {}, created: [], deleted: [] };
+      if (!raw) return { edited: {}, created: [], deleted: [], nextStoryNumber: undefined };
       const parsed = JSON.parse(raw);
       return {
         edited: parsed.edited || {},
         created: parsed.created || [],
-        deleted: parsed.deleted || []
+        deleted: parsed.deleted || [],
+        nextStoryNumber: typeof parsed.nextStoryNumber === 'number' ? parsed.nextStoryNumber : undefined
       };
     } catch (e) {
       console.warn('No se pudo leer localStorage', e);
-      return { edited: {}, created: [], deleted: [] };
+      return { edited: {}, created: [], deleted: [], nextStoryNumber: undefined };
     }
   }
 
@@ -129,6 +130,36 @@
   // Refresca window.BLOG_DATA.posts (para que las páginas lo lean al renderizar)
   function refresh() {
     window.BLOG_DATA.posts = buildPosts();
+    const overlay = loadOverlay();
+    if (typeof overlay.nextStoryNumber === 'number') {
+      window.BLOG_DATA.nextStoryNumber = overlay.nextStoryNumber;
+    }
+  }
+
+  // ----- Identificadores numerados (nunca se reutilizan) -----
+  // Cada historia nueva recibe "NNN-slug" con un número consecutivo que solo sube.
+  // El número se guarda en window.BLOG_DATA.nextStoryNumber (viene de data.js al
+  // publicar) y se refleja también en localStorage mientras editas en este navegador.
+  // Borrar una historia NUNCA hace bajar el contador ni libera su número.
+  function deriveNextFromIds() {
+    const ids = [...SEED_POSTS.map(p => p.id), ...loadOverlay().created.map(p => p.id)];
+    let max = 0;
+    ids.forEach(id => {
+      const m = /^(\d+)-/.exec(id || '');
+      if (m) max = Math.max(max, parseInt(m[1], 10));
+    });
+    return max + 1;
+  }
+
+  function consumeNextStoryNumber() {
+    const overlay = loadOverlay();
+    const n = (typeof overlay.nextStoryNumber === 'number')
+      ? overlay.nextStoryNumber
+      : (typeof window.BLOG_DATA.nextStoryNumber === 'number' ? window.BLOG_DATA.nextStoryNumber : deriveNextFromIds());
+    overlay.nextStoryNumber = n + 1;
+    saveOverlay(overlay);
+    window.BLOG_DATA.nextStoryNumber = n + 1;
+    return n;
   }
 
   // ----- API pública -----
@@ -286,13 +317,10 @@
   }
 
   function makeId(title) {
-    const base = slugify(title) || `historia-${Date.now()}`;
-    const overlay = loadOverlay();
-    const taken = new Set([...SEED_POSTS.map(p => p.id), ...overlay.created.map(p => p.id)]);
-    if (!taken.has(base)) return base;
-    let i = 2;
-    while (taken.has(`${base}-${i}`)) i++;
-    return `${base}-${i}`;
+    const n = consumeNextStoryNumber();
+    const padded = String(n).padStart(3, '0');
+    const slug = slugify(title) || `historia-${Date.now()}`;
+    return `${padded}-${slug}`;
   }
 
   // Inicialización

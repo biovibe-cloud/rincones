@@ -241,12 +241,43 @@ function HomePage({ t, nav }) {
   );
 }
 
+// Reparte un listado en páginas: la primera puede tener un tamaño distinto
+// (para dejar hueco a la historia destacada grande), el resto usa un tamaño fijo.
+function paginate(total, page, firstSize, restSize) {
+  if (total <= firstSize) return { start: 0, end: total, totalPages: 1, page: 1 };
+  const remaining = total - firstSize;
+  const extraPages = Math.ceil(remaining / restSize);
+  const totalPages = 1 + extraPages;
+  const p = Math.min(Math.max(1, page), totalPages);
+  let start, end;
+  if (p === 1) { start = 0; end = firstSize; }
+  else { start = firstSize + (p - 2) * restSize; end = Math.min(start + restSize, total); }
+  return { start, end, totalPages, page: p };
+}
+
 // ============= HISTORIAS (feed completo con filtros) =============
 function HistoriasPage({ t, nav }) {
   const isC = t.style === 'scrapbook';
   const [filter, setFilter] = useState('todos');
+  const [page, setPage] = useState(1);
   const tags = deriveTagFilters(DATA.posts);
   const filtered = filter === 'todos' ? DATA.posts : DATA.posts.filter(p => p.tags && p.tags.includes(filter));
+
+  useEffect(() => { setPage(1); }, [filter]);
+
+  // La primera página de "Todas" trae 13 (la destacada grande + 12 en cuadrícula);
+  // cualquier otra página, o cualquier filtro, trae 18 (no hay destacada de por medio).
+  const firstSize = filter === 'todos' ? 13 : 18;
+  const { start, end, totalPages, page: curPage } = paginate(filtered.length, page, firstSize, 18);
+  const pageSlice = filtered.slice(start, end);
+  const showFeatured = filter === 'todos' && curPage === 1 && pageSlice.length > 0;
+  const gridItems = showFeatured ? pageSlice.slice(1) : pageSlice;
+
+  function goToPage(n) {
+    setPage(n);
+    const head = document.querySelector('.om-h-head');
+    if (head) head.scrollIntoView({ block: 'start' });
+  }
 
   return (
     <div className="om-historias">
@@ -265,6 +296,10 @@ function HistoriasPage({ t, nav }) {
         .om-h-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         @media (max-width: 1100px) { .om-h-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 700px) { .om-h-grid { grid-template-columns: 1fr; } .om-h-count { margin-left: 0; margin-top: 4px; } }
+        .om-h-pager { display:flex; justify-content:center; gap: 8px; margin-top: 48px; }
+        .om-h-pg { min-width: 38px; height: 38px; padding: 0 6px; border-radius: 999px; border: 1px solid ${t.line}; background: ${t.card}; color: ${t.text}; font-size: 14px; font-weight: 600; cursor: pointer; font-family: ${t.fontBody}; }
+        .om-h-pg.active { background: ${t.accent1}; border-color: ${t.accent1}; color: white; cursor: default; }
+        .om-h-pg:hover:not(.active) { background: ${t.bgAlt}; }
       `}</style>
 
       <div className="om-h-head">
@@ -282,17 +317,25 @@ function HistoriasPage({ t, nav }) {
         <span className="om-h-count">{filtered.length} historia{filtered.length === 1 ? '' : 's'}</span>
       </div>
 
-      {filter === 'todos' && filtered[0] && (
+      {showFeatured && (
         <div className="om-h-feat">
-          <PC post={filtered[0]} t={t} variant="featured" onClick={() => nav('post', filtered[0].id)} />
+          <PC post={pageSlice[0]} t={t} variant="featured" onClick={() => nav('post', pageSlice[0].id)} />
         </div>
       )}
 
       <div className="om-h-grid">
-        {(filter === 'todos' ? filtered.slice(1) : filtered).map(p => (
+        {gridItems.map(p => (
           <PC key={p.id} post={p} t={t} onClick={() => nav('post', p.id)} />
         ))}
       </div>
+
+      {totalPages > 1 && (
+        <div className="om-h-pager">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
+            <button key={n} className={`om-h-pg ${n === curPage ? 'active' : ''}`} onClick={() => n !== curPage && goToPage(n)}>{n}</button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -666,7 +709,6 @@ function MapaFotosPage({ t, nav }) {
   // URL embebida (sin adornos, para iframe) y URL para abrir a pantalla completa.
   const params = `albumId=${MAPA_ALBUM_ID}&apiKey=${MAPA_API_KEY}`;
   const EMBED_URL = `${MAPA_BASE}?embed=1&${params}`;
-  const MAP_URL = `${MAPA_BASE}?${params}`;
   const frameRef = React.useRef(null);
 
   // El mapa embebido (tipo Leaflet) mide su contenedor al arrancar. Cuando se
@@ -710,13 +752,12 @@ function MapaFotosPage({ t, nav }) {
           <h1>Cada foto, en el lugar donde la tomamos.</h1>
           <p>Nuestro mapa interactivo: explora las fotos geolocalizadas, muévete por el mundo y acércate a cada viaje.</p>
         </div>
-        <a className="om-mapaf-open" href={MAP_URL} target="_blank" rel="noopener noreferrer">Abrir en pantalla completa →</a>
       </div>
 
       <div className="om-mapaf-frame">
         <iframe ref={frameRef} src={EMBED_URL} title="Mapa de fotos — mapaFlickr" onLoad={nudge} referrerPolicy="no-referrer-when-downgrade" allowFullScreen></iframe>
       </div>
-      <div className="om-mapaf-note">Si el mapa tarda en cargar, espera unos segundos o ábrelo en pantalla completa.</div>
+      <div className="om-mapaf-note">Si el mapa tarda en cargar, espera unos segundos.</div>
     </div>
   );
 }

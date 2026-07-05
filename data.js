@@ -186,6 +186,7 @@ window.BLOG_DATA = {
         "Naturaleza"
       ],
       "featured": true,
+      "featuredAt": 1782993600000,
       "travelers": "Los dos",
       "coords": "13°46'25.6\"N 100°29'41.3\"E",
       "coverImage": "fotos/002-asia-encantadora-cover.jpg",

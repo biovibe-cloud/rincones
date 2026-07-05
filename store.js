@@ -177,6 +177,17 @@
     post.createdAt = (existing && typeof existing.createdAt === 'number') ? existing.createdAt : now;
     post.updatedAt = now;
 
+    // featuredAt: se fija (o refresca) solo en el momento en que la historia PASA
+    // a estar destacada. Si ya estaba destacada y sigue estándolo, se conserva su
+    // fecha original. Si se desmarca, se borra (para no dejar una fecha vieja colgada).
+    if (post.featured) {
+      post.featuredAt = (existing && existing.featured && typeof existing.featuredAt === 'number')
+        ? existing.featuredAt
+        : now;
+    } else {
+      delete post.featuredAt;
+    }
+
     if (isSeed) {
       // Edición de una semilla
       overlay.edited[post.id] = post;

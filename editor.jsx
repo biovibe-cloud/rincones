@@ -3,7 +3,7 @@
 
 const { useState: edUseState, useEffect: edUseEffect, useRef: edUseRef } = React;
 
-const TAG_OPTIONS = ['Europa', 'Asia', 'África', 'América', 'Oceanía', 'Road trip', 'Ciudad', 'Playa', 'Naturaleza', 'Familia', 'Pueblos'];
+const TAG_OPTIONS = ['Europa', 'Asia', 'África', 'América', 'Oceanía', 'Road trip', 'Ciudad', 'Playa', 'Naturaleza', 'Familia', 'Amigos', 'Pueblos'];
 const MESES = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 
 // Reduce y comprime una imagen en el navegador → data URL (JPEG).

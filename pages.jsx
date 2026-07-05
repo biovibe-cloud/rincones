@@ -1,15 +1,25 @@
 // Páginas del blog. Cada una recibe { t (tokens), nav, postId? }.
 
-const { WorldMap: WM, PostCard: PC, SectionHead: SH, PhotoMapApp: PMA } = window;
+const { WorldMap: WM, PostCard: PC, SectionHead: SH, PhotoMapApp: PMA, computeReadMin } = window;
 const DATA = window.BLOG_DATA;
 const { useState, useEffect } = React;
+
+// Texto "Publicada hace X días" a partir de la fecha real en que la historia
+// se marcó como destacada (featuredAt). Sin esa fecha, no se muestra nada.
+function describeDaysAgo(timestamp) {
+  if (typeof timestamp !== 'number') return null;
+  const days = Math.max(0, Math.floor((Date.now() - timestamp) / 86400000));
+  if (days === 0) return 'Publicada hoy';
+  if (days === 1) return 'Publicada hace 1 día';
+  return `Publicada hace ${days} días`;
+}
 
 // ──────────────────────────────────────────────────────────────
 // DATOS CALCULADOS A PARTIR DE LAS HISTORIAS REALES
 // (asi los contadores, etiquetas y el mapa se mantienen solos al
 //  crear/editar/borrar historias; no hay numeros escritos a mano)
 const CONTINENT_TAGS = ['Europa', 'Asia', 'África', 'América', 'Oceanía'];
-const TAG_ORDER = ['Europa', 'Asia', 'África', 'América', 'Oceanía', 'Road trip', 'Ciudad', 'Playa', 'Naturaleza', 'Familia', 'Pueblos'];
+const TAG_ORDER = ['Europa', 'Asia', 'África', 'América', 'Oceanía', 'Road trip', 'Ciudad', 'Playa', 'Naturaleza', 'Familia', 'Amigos', 'Pueblos'];
 
 // Lee coordenadas en varios formatos habituales y devuelve {lat, lon}:
 //   "41.16° N, 8.63° W"                    (decimal + coma)
@@ -106,6 +116,7 @@ function HomePage({ t, nav }) {
   const others = sorted.filter(p => p.id !== featured.id).slice(0, 3);
   const stats = deriveStats(DATA.posts);
   const pins = derivePins(DATA.posts);
+  const publishedAside = describeDaysAgo(featured.featuredAt);
 
   return (
     <div className="om-home">
@@ -202,7 +213,7 @@ function HomePage({ t, nav }) {
 
       {/* HISTORIA DESTACADA */}
       <section className="om-block">
-        <SH eyebrow="Última historia" title="Lo más fresco del diario." aside="Publicada hace 3 días" t={t} />
+        <SH eyebrow="Última historia" title="Lo más fresco del diario." aside={publishedAside} t={t} />
         <PC post={featured} t={t} variant="featured" onClick={() => nav('post', featured.id)} />
       </section>
 
@@ -300,6 +311,7 @@ function HistoriasPage({ t, nav }) {
         .om-h-pg { min-width: 38px; height: 38px; padding: 0 6px; border-radius: 999px; border: 1px solid ${t.line}; background: ${t.card}; color: ${t.text}; font-size: 14px; font-weight: 600; cursor: pointer; font-family: ${t.fontBody}; }
         .om-h-pg.active { background: ${t.accent1}; border-color: ${t.accent1}; color: white; cursor: default; }
         .om-h-pg:hover:not(.active) { background: ${t.bgAlt}; }
+        .om-h-comeback { text-align: center; font-family: ${t.fontDisplay}; font-size: ${isC ? '18px' : '22px'}; letter-spacing: ${t.letterspacing}; color: ${t.text}; margin-top: 56px; }
       `}</style>
 
       <div className="om-h-head">
@@ -336,6 +348,8 @@ function HistoriasPage({ t, nav }) {
           ))}
         </div>
       )}
+
+      <div className="om-h-comeback">Regresa pronto, subiremos nuevas historias con frecuencia.</div>
     </div>
   );
 }
@@ -414,7 +428,7 @@ function PostPage({ t, nav, postId }) {
         <span>{post.country}</span><span className="sep">·</span>
         <span>{post.region}</span><span className="sep">·</span>
         <span>{post.date}</span><span className="sep">·</span>
-        <span>{post.readMin} min lectura</span><span className="sep">·</span>
+        <span>{computeReadMin(post)} min lectura</span><span className="sep">·</span>
         <span className="om-post-coords">{post.coords}</span>
       </div>
       <h1>{post.title}</h1>

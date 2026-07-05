@@ -2,6 +2,15 @@
 
 const { useState } = React;
 
+// Tiempo de lectura real, calculado a 220 palabras por minuto sobre el texto
+// de la historia (intro + párrafos). El campo "Min. lectura" del editor queda
+// disponible para otro uso futuro, pero ya no es lo que se muestra aquí.
+function computeReadMin(post) {
+  const text = [post.bodyIntro, ...(post.bodyParas || [])].filter(Boolean).join(' ');
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  return Math.max(1, Math.round(words / 220));
+}
+
 // Mapa del mundo estilizado con pines (continentes abstractos + grid de puntos)
 function WorldMap({ t, pins, height = 'auto', onPinClick, large = false }) {
   return (
@@ -83,7 +92,7 @@ function PostCard({ post, t, onClick, variant = 'default' }) {
           {isC && <div className="stamp">VISITADO<br/>{post.dateShort}</div>}
         </div>
         <div className="body">
-          <div className="meta">{post.country} · {post.date} · {post.readMin} min</div>
+          <div className="meta">{post.country} · {post.date} · {computeReadMin(post)} min</div>
           <h2>{post.title}</h2>
           <p>{post.subtitle}</p>
           <span className="read">Leer historia →</span>
@@ -203,4 +212,4 @@ function PhotoMapMock({ t }) {
   );
 }
 
-Object.assign(window, { WorldMap, PostCard, SectionHead, PhotoMapApp });
+Object.assign(window, { WorldMap, PostCard, SectionHead, PhotoMapApp, computeReadMin });

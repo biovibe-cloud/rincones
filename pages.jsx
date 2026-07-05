@@ -617,7 +617,7 @@ function NosotrosPage({ t, nav }) {
         .om-members { margin-bottom: 64px; }
         .om-members-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
         .om-member { background: ${t.paper}; border: 1px solid ${t.line}; border-radius: ${t.radius}; padding: 28px; text-align: center; }
-        .om-member-avatar { width: 80px; height: 80px; border-radius: 50%; display:inline-flex; align-items:center; justify-content:center; font-family: ${t.fontDisplay}; font-size: 32px; font-weight: ${t.weights.display}; color: ${t.bg}; margin: 0 auto 16px; }
+        .om-member-avatar { width: 160px; height: 160px; border-radius: 50%; display:inline-flex; align-items:center; justify-content:center; font-family: ${t.fontDisplay}; font-size: 32px; font-weight: ${t.weights.display}; color: ${t.bg}; margin: 0 auto 16px; }
         .om-member .name { font-family: ${t.fontDisplay}; font-size: 20px; font-weight: ${t.weights.display}; color: ${t.text}; }
         .om-member .note { font-size: 13px; color: ${t.textMuted}; margin-top: 4px; }
 
@@ -663,7 +663,7 @@ function NosotrosPage({ t, nav }) {
         <div className="om-members-grid">
           {DATA.family.members.map((m, i) => (
             <div key={i} className="om-member">
-              <div className="om-member-avatar" style={{ background: memberColors[i] }}>{m.initial}</div>
+              <div className="om-member-avatar" style={m.photo ? { backgroundImage: `url(${m.photo})`, backgroundSize: 'cover', backgroundPosition: 'center' } : { background: memberColors[i] }}>{!m.photo && m.initial}</div>
               <div className="name">{m.name}</div>
               <div className="note">{m.note}</div>
             </div>

@@ -323,12 +323,14 @@ window.BLOG_DATA = {
       {
         "initial": "D",
         "name": "Dora",
-        "note": "el alma de los viajes"
+        "note": "el alma de los viajes",
+        "photo": "fotos/0-avatar-Dora.jpg"
       },
       {
         "initial": "R",
         "name": "Ruben",
-        "note": "el de las fotos"
+        "note": "el de las fotos",
+        "photo": "fotos/0-avatar-Ruben.jpg"
       }
     ]
   }

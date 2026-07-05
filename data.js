@@ -18,8 +18,8 @@ window.BLOG_DATA = {
         "Ciudad",
         "Naturaleza"
       ],
-      "featured": true,
-      "featuredAt": 1783286865873,
+      "featured": false,
+      "featuredAt": 1782993600000,
       "travelers": "Los dos",
       "coords": "13°46'25.6\"N 100°29'41.3\"E",
       "coverImage": "fotos/002-asia-encantadora-cover.jpg",
@@ -44,7 +44,50 @@ window.BLOG_DATA = {
       ],
       "monthIdx": 6,
       "createdAt": 6,
-      "updatedAt": 1783286865873
+      "updatedAt": 1783288264352
+    },
+    {
+      "id": "001-cambodia-cambodia",
+      "title": "Asia encantadora",
+      "subtitle": "Dos paises sorprendentes - Cambodia",
+      "country": "Cambodia",
+      "region": "Sur este asiatico",
+      "date": "Julio 2026",
+      "dateShort": "JUL · 26",
+      "year": 2026,
+      "readMin": 5,
+      "tags": [
+        "Asia",
+        "Ciudad",
+        "Naturaleza"
+      ],
+      "featured": true,
+      "travelers": "Los dos",
+      "coords": "13.41° N, 103.87° E",
+      "coverImage": "fotos/001-cambodia-cambodia-cover.jpg",
+      "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
+      "bodyParas": [
+        "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma, la comida, asistencia en salud, muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzamos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
+        "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo totalmente inesperado. Fue sorprendente porque nuestro plan era conocer Tailandia, un destino que ya en 2016 se destacaba en las guías muy bien promocionado. Pero en los últimos días antes de salir algo conocimos sobre Cambodia y nos llamó la atención pero ya teníamos la visa de una sola entrada a Tailandia y no quedaba tiempo para tramitar una nueva visa múltiple, con una averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia y poder entrar nuevamente a Tailandia pero era necesario hacerlo antes de pasar por inmigración así que decidimos hacer el intento. Sorprendentemente en el mismo aeropuerto encontramos una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes como justificar el cambio, te dan un permiso de re-entrada te permite seguir a Cambodia y presentarlos al reingresar a Tailandia. Con el permiso en mano tomamos un vuelo y en las horas de la noche estábamos arribando al mundo inesperado de Siem reap. Al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Wat, estuvimos 2 días recorriendo las sorprendentes ruinas, más de 500 años de historia del imperio Jemer desconocido por largo tiempo para el occidente y luego nos dirigimos a la capital Nom Pen donde pudimos conocer de su historia y la dolorosa que sufrieron en los años 60, una historia que como Colombianos no nos es ajena en la que hermanos del mismo país se sacrifican en luchas que no dejan mas que dolor y destrucción. Hoy afortunadamente el país se levanta y aunque carga con el debilitamiento económico que dejó años de guerra interna se sobrepone con esperanza de futuro prospero.",
+        "Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son absolutamente amorosos con cada persona que llega, humildes, sencillos, generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. De allí viajamos de regreso a Changmai, en el norte de Tailandia a continuar nuestra aventura por primera vez en Asia,"
+      ],
+      "places": [
+        {
+          "name": "Angkor Wat",
+          "type": "Otro",
+          "town": "Siem reap",
+          "note": "Ruinas de civilización de 500 años"
+        }
+      ],
+      "album": [
+        "fotos/001-cambodia-cambodia-alb-1.jpg",
+        "fotos/001-cambodia-cambodia-alb-2.jpg",
+        "fotos/001-cambodia-cambodia-alb-3.jpg"
+      ],
+      "monthIdx": 6,
+      "createdAt": 5,
+      "updatedAt": 1783288285848,
+      "featuredAt": 1783288285848
     },
     {
       "id": "004-cinque-terre",
@@ -96,48 +139,6 @@ window.BLOG_DATA = {
       "createdAt": 4,
       "updatedAt": 1783287926275,
       "featuredAt": 1783286165892
-    },
-    {
-      "id": "001-cambodia-cambodia",
-      "title": "Asia encantadora",
-      "subtitle": "Dos paises sorprendentes - Cambodia",
-      "country": "Cambodia",
-      "region": "Sur este asiatico",
-      "date": "Julio 2026",
-      "dateShort": "JUL · 26",
-      "year": 2026,
-      "readMin": 5,
-      "tags": [
-        "Asia",
-        "Ciudad",
-        "Naturaleza"
-      ],
-      "featured": false,
-      "travelers": "Los dos",
-      "coords": "13.41° N, 103.87° E",
-      "coverImage": "fotos/001-cambodia-cambodia-cover.jpg",
-      "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
-      "bodyParas": [
-        "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma, la comida, asistencia en salud, muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzamos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
-        "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo totalmente inesperado. Fue sorprendente porque nuestro plan era conocer Tailandia, un destino que ya en 2016 se destacaba en las guías muy bien promocionado. Pero en los últimos días antes de salir algo conocimos sobre Cambodia y nos llamó la atención pero ya teníamos la visa de una sola entrada a Tailandia y no quedaba tiempo para tramitar una nueva visa múltiple, con una averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia y poder entrar nuevamente a Tailandia pero era necesario hacerlo antes de pasar por inmigración así que decidimos hacer el intento. Sorprendentemente en el mismo aeropuerto encontramos una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes como justificar el cambio, te dan un permiso de re-entrada te permite seguir a Cambodia y presentarlos al reingresar a Tailandia. Con el permiso en mano tomamos un vuelo y en las horas de la noche estábamos arribando al mundo inesperado de Siem reap. Al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Wat, estuvimos 2 días recorriendo las sorprendentes ruinas, más de 500 años de historia del imperio Jemer desconocido por largo tiempo para el occidente y luego nos dirigimos a la capital Nom Pen donde pudimos conocer de su historia y la dolorosa que sufrieron en los años 60, una historia que como Colombianos no nos es ajena en la que hermanos del mismo país se sacrifican en luchas que no dejan mas que dolor y destrucción. Hoy afortunadamente el país se levanta y aunque carga con el debilitamiento económico que dejó años de guerra interna se sobrepone con esperanza de futuro prospero.",
-        "Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son absolutamente amorosos con cada persona que llega, humildes, sencillos, generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. De allí viajamos de regreso a Changmai, en el norte de Tailandia a continuar nuestra aventura por primera vez en Asia,"
-      ],
-      "places": [
-        {
-          "name": "Angkor Wat",
-          "type": "Otro",
-          "town": "Siem reap",
-          "note": "Ruinas de civilización de 500 años"
-        }
-      ],
-      "album": [
-        "fotos/001-cambodia-cambodia-alb-1.jpg",
-        "fotos/001-cambodia-cambodia-alb-2.jpg",
-        "fotos/001-cambodia-cambodia-alb-3.jpg"
-      ],
-      "monthIdx": 6,
-      "createdAt": 5,
-      "updatedAt": 5
     },
     {
       "id": "003-cartagena",

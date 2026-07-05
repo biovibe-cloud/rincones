@@ -4,48 +4,6 @@
 window.BLOG_DATA = {
   "posts": [
     {
-      "id": "001-cambodia-cambodia",
-      "title": "Asia encantadora",
-      "subtitle": "Dos paises sorprendentes - Cambodia",
-      "country": "Cambodia",
-      "region": "Sur este asiatico",
-      "date": "Julio 2026",
-      "dateShort": "JUL · 26",
-      "year": 2026,
-      "readMin": 5,
-      "tags": [
-        "Asia",
-        "Ciudad",
-        "Naturaleza"
-      ],
-      "featured": false,
-      "travelers": "Los dos",
-      "coords": "13.41° N, 103.87° E",
-      "coverImage": "fotos/001-cambodia-cambodia-cover.jpg",
-      "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
-      "bodyParas": [
-        "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma, la comida, asistencia en salud, muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzamos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
-        "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo totalmente inesperado. Fue sorprendente porque nuestro plan era conocer Tailandia, un destino que ya en 2016 se destacaba en las guías muy bien promocionado. Pero en los últimos días antes de salir algo conocimos sobre Cambodia y nos llamó la atención pero ya teníamos la visa de una sola entrada a Tailandia y no quedaba tiempo para tramitar una nueva visa múltiple, con una averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia y poder entrar nuevamente a Tailandia pero era necesario hacerlo antes de pasar por inmigración así que decidimos hacer el intento. Sorprendentemente en el mismo aeropuerto encontramos una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes como justificar el cambio, te dan un permiso de re-entrada te permite seguir a Cambodia y presentarlos al reingresar a Tailandia. Con el permiso en mano tomamos un vuelo y en las horas de la noche estábamos arribando al mundo inesperado de Siem reap. Al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Wat, estuvimos 2 días recorriendo las sorprendentes ruinas, más de 500 años de historia del imperio Jemer desconocido por largo tiempo para el occidente y luego nos dirigimos a la capital Nom Pen donde pudimos conocer de su historia y la dolorosa que sufrieron en los años 60, una historia que como Colombianos no nos es ajena en la que hermanos del mismo país se sacrifican en luchas que no dejan mas que dolor y destrucción. Hoy afortunadamente el país se levanta y aunque carga con el debilitamiento económico que dejó años de guerra interna se sobrepone con esperanza de futuro prospero.",
-        "Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son absolutamente amorosos con cada persona que llega, humildes, sencillos, generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. De allí viajamos de regreso a Changmai, en el norte de Tailandia a continuar nuestra aventura por primera vez en Asia,"
-      ],
-      "places": [
-        {
-          "name": "Angkor Wat",
-          "type": "Otro",
-          "town": "Siem reap",
-          "note": "Ruinas de civilización de 500 años"
-        }
-      ],
-      "album": [
-        "fotos/001-cambodia-cambodia-alb-1.jpg",
-        "fotos/001-cambodia-cambodia-alb-2.jpg",
-        "fotos/001-cambodia-cambodia-alb-3.jpg"
-      ],
-      "monthIdx": 6,
-      "createdAt": 6,
-      "updatedAt": 6
-    },
-    {
       "id": "002-asia-encantadora",
       "title": "Asia encantadora",
       "subtitle": "Dos paises sorprendentes - Tailandia",
@@ -87,6 +45,99 @@ window.BLOG_DATA = {
       "monthIdx": 6,
       "createdAt": 6,
       "updatedAt": 1783282463471
+    },
+    {
+      "id": "004-cinque-terre",
+      "title": "El placer de viajar con amigos",
+      "subtitle": "Una semana caminando conociendo Canada con un grupo de extraordinarios amigos",
+      "country": "Canada",
+      "region": "Niagara",
+      "date": "Septiembre 2025",
+      "dateShort": "SEP · 25",
+      "year": 2025,
+      "readMin": 12,
+      "tags": [
+        "América",
+        "Amigos"
+      ],
+      "featured": true,
+      "travelers": "Con Amigos",
+      "coords": "43.65° N, 79.38° W",
+      "coverImage": "fotos/004-cinque-terre-cover.jpg",
+      "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",
+      "bodyParas": [
+        "En 2017 tuvimos la gran oportunidad de compartir con algunos amigos momentos extraordinarios visitando Canadá. Ha sido uno de los viajes más placenteros que hemos podido tener: las risas, Los buenos momentos , la buena vibra ,la alegría pero el conocimiento , la actitud ante la vida , la generosidad para enseñar y los momentos sencillos caminando por calles de Canadá son de los recuerdos más extraordinarios que podemos tener. Vamos a tener. Arribamos a Toronto donde quedamos de encontrarnos y el líder del viaje nos citó en un hotel muy bonito. Fuimos entrando uno a uno al lobby para ser recibidos con caluroso abrazo de nuestros amigos. Descansamos un rato y luego salimos a cenar. Tuvimos la posibilidad de compartir en una taberna reírnos tomar fotos contar historias. Y cada uno enriquecer a los demás con su buena vibra. Al día siguiente nos dirigimos a las Cataratas del Niágara, ese esplendoroso lugar que sólo habíamos visto en fotografías y del que teníamos la impresión de que sería algo majestuoso lo que encontraríamos. Pero Y la posibilidad de compartir con personas exitosas que hacen su vida cada vez mejor y que día a día trabajan para hacer la vida de los demás mucho mejor. Los momentos de las fotos, la camaradería que disfrutamos esos días nos permitieron tener uno de los viajes más fantásticos que hemos tenido. Marzo en el hemisferio norte es uno de los momentos más agradables para visitar. Se está saliendo del invierno y los árboles comienzan a cambiar de color, a reverdecer. El clima es frío pero suave. Los paisajes todavía con nieve. Para nosotros los latinos siempre ha sido un gran atractivo caminar por calles congeladas, disfrutar en pequeños restaurantes calentados artificialmente la luz para tomar fotografías espectaculares. Esos son los ingredientes que nos permitieron disfrutar mucho del paisaje, del ambiente y del clima. Estuvimos en Toronto varios días y luego nos separamos de nuestros amigos y nos dirigimos hacia Vancouver, corrección, hacia Quebec. Este ya fue un viaje de pareja a una ciudad de México. Con una zona mucho más fría , con mucha más nieve en donde pudimos caminar de la mano, disfrutar cada uno del otro, aventurarnos un poco en zonas congeladas, visitar un hotel de nieve, tomar un trago con parte de las paredes del lugar. Y como siempre disfrutar de la compañía mutua. Después de varios días nos regresamos en tren para posteriormente regresar a Colombia. Ha sido otro de esos viajes esplendorosos que la vida nos regala."
+      ],
+      "places": [
+        {
+          "name": "CAstillo de Quebec",
+          "type": "Otro",
+          "town": "Quebec",
+          "note": "Hotel de lujo en una edificación bella"
+        },
+        {
+          "name": "Cataratas del Niagara",
+          "type": "Mirador",
+          "town": "Niagara",
+          "note": "El poder de la naturaleza"
+        },
+        {
+          "name": "Bisonte",
+          "type": "Comida",
+          "town": "Quebec",
+          "note": "Nos atrevimos a probar"
+        }
+      ],
+      "album": [
+        "fotos/004-cinque-terre-alb-1.jpg",
+        "fotos/004-cinque-terre-alb-2.jpg"
+      ],
+      "monthIdx": 8,
+      "createdAt": 4,
+      "updatedAt": 1783286165892,
+      "featuredAt": 1783286165892
+    },
+    {
+      "id": "001-cambodia-cambodia",
+      "title": "Asia encantadora",
+      "subtitle": "Dos paises sorprendentes - Cambodia",
+      "country": "Cambodia",
+      "region": "Sur este asiatico",
+      "date": "Julio 2026",
+      "dateShort": "JUL · 26",
+      "year": 2026,
+      "readMin": 5,
+      "tags": [
+        "Asia",
+        "Ciudad",
+        "Naturaleza"
+      ],
+      "featured": false,
+      "travelers": "Los dos",
+      "coords": "13.41° N, 103.87° E",
+      "coverImage": "fotos/001-cambodia-cambodia-cover.jpg",
+      "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
+      "bodyParas": [
+        "No fue fácil tomar la decisión de viajar hasta Asia, es un lugar lejano poco conocido y en mucha medida atemorizante : El idioma, la comida, asistencia en salud, muchas cosas nos detenían de tomar la decisión pero nuestro espíritu aventurero pudo mas y nos lanzamos y una vez allá no podíamos cerrar nuestros ojos ante tanta belleza tanta maravilla tanta historia gente tan hermosa y aunque fue agotador las tres semanas en que visitamos Tailandia y Cambodia fue realmente mucho lo que pudimos aprender y mucho lo que nuestros seres cambiaron al conocer culturas tan diferentes.",
+        "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto y nos dirigimos a un mundo totalmente inesperado. Fue sorprendente porque nuestro plan era conocer Tailandia, un destino que ya en 2016 se destacaba en las guías muy bien promocionado. Pero en los últimos días antes de salir algo conocimos sobre Cambodia y nos llamó la atención pero ya teníamos la visa de una sola entrada a Tailandia y no quedaba tiempo para tramitar una nueva visa múltiple, con una averiguación rápida supimos que en el aeropuerto de Bangkok quizá podía conseguirse un permiso para seguir hacia Cambodia y poder entrar nuevamente a Tailandia pero era necesario hacerlo antes de pasar por inmigración así que decidimos hacer el intento. Sorprendentemente en el mismo aeropuerto encontramos una pequeña oficina en el que si te acercas con tu pasaporte y compruebas que tienes como justificar el cambio, te dan un permiso de re-entrada te permite seguir a Cambodia y presentarlos al reingresar a Tailandia. Con el permiso en mano tomamos un vuelo y en las horas de la noche estábamos arribando al mundo inesperado de Siem reap. Al leer guías de viaje encontramos que se podía visitar Angkor Wat. De manera que contratamos un guía que nos ayudó a organizar nuestro viaje hacia Angkor Wat, estuvimos 2 días recorriendo las sorprendentes ruinas, más de 500 años de historia del imperio Jemer desconocido por largo tiempo para el occidente y luego nos dirigimos a la capital Nom Pen donde pudimos conocer de su historia y la dolorosa que sufrieron en los años 60, una historia que como Colombianos no nos es ajena en la que hermanos del mismo país se sacrifican en luchas que no dejan mas que dolor y destrucción. Hoy afortunadamente el país se levanta y aunque carga con el debilitamiento económico que dejó años de guerra interna se sobrepone con esperanza de futuro prospero.",
+        "Nos sorprendimos con la historia pero sobre todo con la gente si algo nos dejó marcado fue la calidez de sus personas un país que sufrió mucho en el pasado debido a guerras internas y tal vez por eso mismo hablando los corazones de sus pobladores que hoy son absolutamente amorosos con cada persona que llega, humildes, sencillos, generosos y aunque hay grandes estructuras milenarias mucha historia y mucho de lo que los turistas vamos a ver lo que nos trajimos en el corazón fue esa calidez de las personas camboyanas es impresionante como un pueblo que sufre de pobreza de un nivel muy bajo económico puede ser tan tremendamente amoroso y puede ofrecer tanto a quienes vamos a conocerlos. De allí viajamos de regreso a Changmai, en el norte de Tailandia a continuar nuestra aventura por primera vez en Asia,"
+      ],
+      "places": [
+        {
+          "name": "Angkor Wat",
+          "type": "Otro",
+          "town": "Siem reap",
+          "note": "Ruinas de civilización de 500 años"
+        }
+      ],
+      "album": [
+        "fotos/001-cambodia-cambodia-alb-1.jpg",
+        "fotos/001-cambodia-cambodia-alb-2.jpg",
+        "fotos/001-cambodia-cambodia-alb-3.jpg"
+      ],
+      "monthIdx": 6,
+      "createdAt": 5,
+      "updatedAt": 5
     },
     {
       "id": "003-cartagena",
@@ -139,57 +190,6 @@ window.BLOG_DATA = {
         "fotos/003-cartagena-alb-5.jpg"
       ],
       "monthIdx": 4,
-      "createdAt": 5,
-      "updatedAt": 5
-    },
-    {
-      "id": "004-cinque-terre",
-      "title": "El placer de viajar con amigos",
-      "subtitle": "Una semana caminando conociendo Canada con un grupo de extraordinarios amigos",
-      "country": "Canada",
-      "region": "Niagara",
-      "date": "Septiembre 2025",
-      "dateShort": "SEP · 25",
-      "year": 2025,
-      "readMin": 12,
-      "tags": [
-        "Pueblos",
-        "América",
-        "Naturaleza"
-      ],
-      "featured": false,
-      "travelers": "Con Amigos",
-      "coords": "43.65° N, 79.38° W",
-      "coverImage": "fotos/004-cinque-terre-cover.jpg",
-      "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",
-      "bodyParas": [
-        "En 2017 tuvimos la gran oportunidad de compartir con algunos amigos momentos extraordinarios visitando Canadá. Ha sido uno de los viajes más placenteros que hemos podido tener: las risas, Los buenos momentos , la buena vibra ,la alegría pero el conocimiento , la actitud ante la vida , la generosidad para enseñar y los momentos sencillos caminando por calles de Canadá son de los recuerdos más extraordinarios que podemos tener. Vamos a tener. Arribamos a Toronto donde quedamos de encontrarnos y el líder del viaje nos citó en un hotel muy bonito. Fuimos entrando uno a uno al lobby para ser recibidos con caluroso abrazo de nuestros amigos. Descansamos un rato y luego salimos a cenar. Tuvimos la posibilidad de compartir en una taberna reírnos tomar fotos contar historias. Y cada uno enriquecer a los demás con su buena vibra. Al día siguiente nos dirigimos a las Cataratas del Niágara, ese esplendoroso lugar que sólo habíamos visto en fotografías y del que teníamos la impresión de que sería algo majestuoso lo que encontraríamos. Pero Y la posibilidad de compartir con personas exitosas que hacen su vida cada vez mejor y que día a día trabajan para hacer la vida de los demás mucho mejor. Los momentos de las fotos, la camaradería que disfrutamos esos días nos permitieron tener uno de los viajes más fantásticos que hemos tenido. Marzo en el hemisferio norte es uno de los momentos más agradables para visitar. Se está saliendo del invierno y los árboles comienzan a cambiar de color, a reverdecer. El clima es frío pero suave. Los paisajes todavía con nieve. Para nosotros los latinos siempre ha sido un gran atractivo caminar por calles congeladas, disfrutar en pequeños restaurantes calentados artificialmente la luz para tomar fotografías espectaculares. Esos son los ingredientes que nos permitieron disfrutar mucho del paisaje, del ambiente y del clima. Estuvimos en Toronto varios días y luego nos separamos de nuestros amigos y nos dirigimos hacia Vancouver, corrección, hacia Quebec. Este ya fue un viaje de pareja a una ciudad de México. Con una zona mucho más fría , con mucha más nieve en donde pudimos caminar de la mano, disfrutar cada uno del otro, aventurarnos un poco en zonas congeladas, visitar un hotel de nieve, tomar un trago con parte de las paredes del lugar. Y como siempre disfrutar de la compañía mutua. Después de varios días nos regresamos en tren para posteriormente regresar a Colombia. Ha sido otro de esos viajes esplendorosos que la vida nos regala."
-      ],
-      "places": [
-        {
-          "name": "CAstillo de Quebec",
-          "type": "Otro",
-          "town": "Quebec",
-          "note": "Hotel de lujo en una edificación bella"
-        },
-        {
-          "name": "Cataratas del Niagara",
-          "type": "Mirador",
-          "town": "Niagara",
-          "note": "El poder de la naturaleza"
-        },
-        {
-          "name": "Bisonte",
-          "type": "Comida",
-          "town": "Quebec",
-          "note": "Nos atrevimos a probar"
-        }
-      ],
-      "album": [
-        "fotos/004-cinque-terre-alb-1.jpg",
-        "fotos/004-cinque-terre-alb-2.jpg"
-      ],
-      "monthIdx": 8,
       "createdAt": 4,
       "updatedAt": 4
     },

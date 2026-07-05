@@ -137,7 +137,7 @@ window.BLOG_DATA = {
         "Naturaleza"
       ],
       "featured": false,
-      "travelers": "Los dos",
+      "travelers": "Con Amigos",
       "coords": "43.65° N, 79.38° W",
       "coverImage": "fotos/cinque-terre-cover.jpg",
       "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",

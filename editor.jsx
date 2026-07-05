@@ -405,7 +405,11 @@ function StoryEditor({ t, open, onClose, onChange }) {
         .ed-list-item { padding: 12px 14px; border-radius: 10px; cursor: pointer; margin-bottom: 2px; display:flex; flex-direction: column; gap: 3px; border: 1px solid transparent; }
         .ed-list-item:hover { background: ${t.bgAlt}; }
         .ed-list-item.active { background: ${t.bgAlt}; border-color: ${t.line}; }
-        .ed-list-title { font-size: 14px; font-weight: 600; color: ${t.text}; line-height: 1.3; }
+        .ed-list-row { display:flex; align-items:center; gap: 10px; }
+        .ed-list-dot { width:6px; height:6px; border-radius:50%; background: ${t.accent1}; flex-shrink:0; }
+        .ed-list-txt { flex:1; min-width:0; }
+        .ed-list-year { font-size: 11px; color: ${t.textMuted}; flex-shrink:0; }
+        .ed-list-title { font-size: 14px; font-weight: 600; color: ${t.text}; line-height: 1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
         .ed-list-sub { font-size: 11px; color: ${t.textMuted}; display:flex; gap: 8px; align-items:center; }
         .ed-badge { font-size: 9px; padding: 2px 6px; border-radius: 4px; letter-spacing: 0.06em; font-weight: 700; text-transform: uppercase; }
         .ed-badge.new { background: ${t.accent2}; color: white; }
@@ -563,11 +567,17 @@ function StoryEditor({ t, open, onClose, onChange }) {
                   className={`ed-list-item ${selectedId === p.id ? 'active' : ''}`}
                   onClick={() => setSelectedId(p.id)}
                 >
-                  <div className="ed-list-title">{p.title || '(sin título)'}</div>
-                  <div className="ed-list-sub">
-                    <span>{p.country} · {p.date}</span>
-                    {!isSeedPost && <span className="ed-badge new">Nueva</span>}
-                    {isSeedPost && wasEdited && <span className="ed-badge edited">Editada</span>}
+                  <div className="ed-list-row">
+                    <span className="ed-list-dot"></span>
+                    <div className="ed-list-txt">
+                      <div className="ed-list-title">{p.title || '(sin título)'}</div>
+                      <div className="ed-list-sub">
+                        <span>{p.country}</span>
+                        {!isSeedPost && <span className="ed-badge new">Nueva</span>}
+                        {isSeedPost && wasEdited && <span className="ed-badge edited">Editada</span>}
+                      </div>
+                    </div>
+                    <span className="ed-list-year">{p.year || ''}</span>
                   </div>
                 </div>
               );
@@ -669,7 +679,7 @@ function StoryEditor({ t, open, onClose, onChange }) {
               <div className="ed-field">
                 <label className="ed-label">Quiénes</label>
                 <select className="ed-select" value={form.travelers} onChange={e => update('travelers', e.target.value)}>
-                  {['Dora', 'Ruben', 'Los dos', 'Los cuatro', 'Familia y Amigos'].map(o => <option key={o}>{o}</option>)}
+                  {['Dora', 'Ruben', 'Los dos', 'Los cuatro', 'En Familia', 'Con Amigos'].map(o => <option key={o}>{o}</option>)}
                 </select>
               </div>
             </div>

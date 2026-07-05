@@ -415,6 +415,7 @@ function StoryEditor({ t, open, onClose, onChange }) {
         .ed-badge.new { background: ${t.accent2}; color: white; }
         .ed-badge.edited { background: ${t.accent1}; color: white; }
         .ed-badge.seed { background: ${t.bgAlt}; color: ${t.textMuted}; }
+        .ed-badge.feat { background: ${t.accent2}; color: white; }
         .ed-side-foot { border-top: 1px solid ${t.line}; padding: 12px 14px; display:flex; flex-direction: column; gap: 8px; font-size: 11px; }
         .ed-side-foot-row { display:flex; gap: 8px; }
         .ed-publish-btn { width: 100%; padding: 11px 12px; background: ${t.accent2}; border: 1px solid ${t.accent2}; border-radius: 9px; cursor: pointer; color: #fff; font-family: inherit; font-size: 13px; font-weight: 700; letter-spacing: .2px; transition: filter .15s ease; }
@@ -573,6 +574,7 @@ function StoryEditor({ t, open, onClose, onChange }) {
                       <div className="ed-list-title">{p.title || '(sin título)'}</div>
                       <div className="ed-list-sub">
                         <span>{p.country}</span>
+                        {p.featured && <span className="ed-badge feat">★ Destacada</span>}
                         {!isSeedPost && <span className="ed-badge new">Nueva</span>}
                         {isSeedPost && wasEdited && <span className="ed-badge edited">Editada</span>}
                       </div>

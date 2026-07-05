@@ -312,7 +312,8 @@
     const ok = saveOverlay({
       edited: s.overlay.edited || {},
       created: s.overlay.created || [],
-      deleted: s.overlay.deleted || []
+      deleted: s.overlay.deleted || [],
+      nextStoryNumber: typeof s.overlay.nextStoryNumber === 'number' ? s.overlay.nextStoryNumber : undefined
     });
     refresh();
     return ok;

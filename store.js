@@ -185,7 +185,7 @@
         ? existing.featuredAt
         : now;
     } else {
-      delete post.featuredAt;
+      post.featuredAt = null;
     }
 
     if (isSeed) {
@@ -197,6 +197,23 @@
       if (idx >= 0) overlay.created[idx] = post;
       else overlay.created.unshift(post);
     }
+
+    // Exclusividad: solo una historia puede estar destacada a la vez. Si esta
+    // queda destacada, se desmarca cualquier otra que lo estuviera (y se le
+    // borra su featuredAt, para que no quede una fecha vieja colgada).
+    if (post.featured) {
+      const others = (window.BLOG_DATA.posts || []).filter(p => p.id !== post.id && p.featured);
+      others.forEach(o => {
+        const unfeatured = { ...o, featured: false, featuredAt: null };
+        if (SEED_POSTS.some(p => p.id === o.id)) {
+          overlay.edited[o.id] = unfeatured;
+        } else {
+          const oi = overlay.created.findIndex(p => p.id === o.id);
+          if (oi >= 0) overlay.created[oi] = unfeatured;
+        }
+      });
+    }
+
     const ok = saveOverlay(overlay);
     refresh();
     return ok;

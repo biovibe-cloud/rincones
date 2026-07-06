@@ -25,7 +25,8 @@ window.BLOG_DATA = {
       "bodyIntro": "Viajar a Asia puede resultar atemorizante, pero una vez que llegas solo déjate sorprender.",
       "bodyParas": [
         "Llegamos temprano en la mañana a Tailandia procedentes de Londres con el cansancio de mas de 20 horas de viaje. Tomamos un nuevo avión sin salir del aeropuerto hacia Cambodia de donde llegamos 5 días después mucho mas inspirados de conocer este país tan extraño pero que nos resultaba tan interesante.",
-        "Llegamos a la parte norte de Tailandia, tuve la inolvidable experiencia de pasar un día completo en un refugio para elefantes rescatados ,de alimentarlos cuidarlos conocerlos y la oportunidad de adentrarme en aguas bajas para acompañarlos en su proceso de baño y ayudarlos a bañar. Va a ser uno de los recuerdos más importantes de mi vida por esa cercanía con ese animal que tanto había querido conocer de cerca: la nobleza del elefante es similar a la de los Tailandeses y los camboyanos. Los siguientes días la pasamos visitando ruinas, palacios, estructuras doradas de la comida, de la gente y de la historia de Tailandia. Han sido de las vacaciones que más nos han cambiado como personas pero también de las que más nos ha sorprendido: de la diversidad de seres humanos, de los paisajes, de diversidad de mundos y de cómo los latinos nos parecemos a los asiáticos. Unos años después decidiríamos Y siempre venimos más sorprendidos que la vez anterior. Vale la pena conocer Tailandia."
+        "Llegamos a la parte norte de Tailandia, tuve la inolvidable experiencia de pasar un día completo en un refugio para elefantes rescatados ,de alimentarlos cuidarlos conocerlos y la oportunidad de adentrarme en aguas bajas para acompañarlos en su proceso de baño y ayudarlos a bañar. Va a ser uno de los recuerdos más importantes de mi vida por esa cercanía con ese animal que tanto había querido conocer de cerca: la nobleza del elefante es similar a la de los Tailandeses y los camboyanos. Los siguientes días la pasamos visitando ruinas, palacios, estructuras doradas, en una sorpresa continua con la novedad de la comida, de la gente y de la historia de Tailandia.",
+        "Han sido de las vacaciones que más nos han cambiado como personas pero también de las que más nos ha sorprendido por la calidez de seres humanos, la diversidad de los paisajes, de cómo los latinos nos parecemos a los asiáticos. Vale la pena conocer Tailandia."
       ],
       "places": [
         {
@@ -43,7 +44,8 @@ window.BLOG_DATA = {
       ],
       "monthIdx": 6,
       "createdAt": 6,
-      "updatedAt": 1783288264352
+      "updatedAt": 1783309657629,
+      "featuredAt": null
     },
     {
       "id": "004-cinque-terre",
@@ -65,7 +67,11 @@ window.BLOG_DATA = {
       "coverImage": "fotos/004-cinque-terre-cover.jpg",
       "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",
       "bodyParas": [
-        "En 2017 tuvimos la gran oportunidad de compartir con algunos amigos momentos extraordinarios visitando Canadá. Ha sido uno de los viajes más placenteros que hemos podido tener: las risas, Los buenos momentos , la buena vibra ,la alegría pero el conocimiento , la actitud ante la vida , la generosidad para enseñar y los momentos sencillos caminando por calles de Canadá son de los recuerdos más extraordinarios que podemos tener. Vamos a tener. Arribamos a Toronto donde quedamos de encontrarnos y el líder del viaje nos citó en un hotel muy bonito. Fuimos entrando uno a uno al lobby para ser recibidos con caluroso abrazo de nuestros amigos. Descansamos un rato y luego salimos a cenar. Tuvimos la posibilidad de compartir en una taberna reírnos tomar fotos contar historias. Y cada uno enriquecer a los demás con su buena vibra. Al día siguiente nos dirigimos a las Cataratas del Niágara, ese esplendoroso lugar que sólo habíamos visto en fotografías y del que teníamos la impresión de que sería algo majestuoso lo que encontraríamos. Pero Y la posibilidad de compartir con personas exitosas que hacen su vida cada vez mejor y que día a día trabajan para hacer la vida de los demás mucho mejor. Los momentos de las fotos, la camaradería que disfrutamos esos días nos permitieron tener uno de los viajes más fantásticos que hemos tenido. Marzo en el hemisferio norte es uno de los momentos más agradables para visitar. Se está saliendo del invierno y los árboles comienzan a cambiar de color, a reverdecer. El clima es frío pero suave. Los paisajes todavía con nieve. Para nosotros los latinos siempre ha sido un gran atractivo caminar por calles congeladas, disfrutar en pequeños restaurantes calentados artificialmente la luz para tomar fotografías espectaculares. Esos son los ingredientes que nos permitieron disfrutar mucho del paisaje, del ambiente y del clima. Estuvimos en Toronto varios días y luego nos separamos de nuestros amigos y nos dirigimos hacia Vancouver, corrección, hacia Quebec. Este ya fue un viaje de pareja a una ciudad de México. Con una zona mucho más fría , con mucha más nieve en donde pudimos caminar de la mano, disfrutar cada uno del otro, aventurarnos un poco en zonas congeladas, visitar un hotel de nieve, tomar un trago con parte de las paredes del lugar. Y como siempre disfrutar de la compañía mutua. Después de varios días nos regresamos en tren para posteriormente regresar a Colombia. Ha sido otro de esos viajes esplendorosos que la vida nos regala."
+        "En 2017 tuvimos la gran oportunidad de compartir con algunos amigos momentos extraordinarios visitando Canadá. Ha sido uno de los viajes más placenteros que hemos podido tener: las risas, los buenos momentos, la alegría, la actitud ante la vida , la generosidad para enseñar y los momentos sencillos caminando por calles de Canadá son de los recuerdos más extraordinarios que vamos a conservar.",
+        "Arribamos a Toronto donde quedamos de encontrarnos y el líder del viaje nos citó en un hotel muy bonito. Fuimos entrando uno a uno al lobby para ser recibidos con caluroso abrazo de nuestros amigos. Descansamos un rato y luego salimos a cenar. Tuvimos la posibilidad de compartir en una taberna, reírnos tomar fotos contar historias y cada uno enriquecer a los demás con su buena vibra. Al día siguiente nos dirigimos a las Cataratas del Niágara, ese esplendoroso lugar que sólo habíamos visto en fotografías y del que teníamos la impresión de que sería algo majestuoso, que no decepcionó. Pero nada supera la posibilidad de compartir con personas exitosas que hacen su vida cada vez mejor y que día a día trabajan para hacer la vida de los demás mucho mejor.",
+        "Marzo en el hemisferio norte es uno de los momentos con clima más agradables para visitar. Se está terminando el invierno y los árboles comienzan a cambiar de color, a reverdecer. El clima es frío pero suave. Los paisajes todavía con nieve. Para nosotros los latinos siempre ha sido un gran atractivo caminar por calles blancas, disfrutar en pequeños restaurantes calentados artificialmente, la luz para tomar fotografías espectaculares esos son ingredientes que nos permitieron disfrutar mucho del paisaje, del ambiente y del clima.",
+        "Estuvimos en Toronto varios días y luego nos separamos de nuestros amigos y nos dirigimos hacia  Quebec. Este ya fue un viaje de pareja donde pudimos caminar de la mano, disfrutar cada uno del otro, aventurarnos un poco en zonas congeladas, visitar un hotel de nieve, tomar un trago con parte de las paredes del lugar, y como siempre disfrutar de la compañía mutua.",
+        "Después de varios días nos regresamos en tren para posteriormente regresar a Colombia. Ha sido otro de esos viajes esplendorosos que la vida nos regala."
       ],
       "places": [
         {
@@ -93,8 +99,52 @@ window.BLOG_DATA = {
       ],
       "monthIdx": 8,
       "createdAt": 4,
-      "updatedAt": 1783293275165,
+      "updatedAt": 1783310190462,
       "featuredAt": 1783293275165
+    },
+    {
+      "id": "007-vietnam",
+      "title": "Vietnam un país subvalorado por Holywood",
+      "subtitle": "De Hanoi a Da Nang y Ho chi Ming con muchas preguntas",
+      "country": "Vietnam",
+      "region": "Norte y centro",
+      "date": "Abril 2019",
+      "dateShort": "ABR · 19",
+      "year": 2019,
+      "readMin": 22,
+      "tags": [
+        "Asia",
+        "Road trip",
+        "Familia",
+        "Pueblos",
+        "Naturaleza"
+      ],
+      "featured": false,
+      "travelers": "Los dos",
+      "coords": "16.05° N, 108.21° E",
+      "coverImage": "fotos/007-vietnam-cover.jpg",
+      "bodyIntro": "Totalmente diferente a lo que las películas nos muestran",
+      "bodyParas": [
+        "Cuando uno se decide ir a Vietnam, la idea que tiene es la que ha visto en las películas de Hollywood. Unos pequeños hombres ojirasgados que se esconden bajo el suelo para hacer el mal a los salvadores que vienen del occidente. Nada más alejado de la realidad. Vietnam es un país pujante fuerte y muy grande con gente poderosa que supo superar las vicisitudes y los estragos de una guerra prolongada contra un enemigo diez veces más poderoso que ellos. \nHoy Vietnam a pesar de tener un sistema de gobierno comunista es un país que progresa, que exporta y que tiene bellezas naturales increíbles para mostrar al mundo. Lo que más nos sorprendió es la atención al visitante y la organización de los diferentes sitios turísticos. La mayoría de su gente es tremendamente trabajadora. \nEntramos por el norte y lo primero que hicimos fue ir a conocer la bahía de Ha long donde tomamos un crucero espectacular del cual trajimos muchos recuerdos, a Dora le gusta mucho cocinar y en la noche participó de una experiencia consistente en preparar guiada por el chef los típicos rollitos primavera, esa fue una de las experiencias más disfrutable para ella. Luego nos dirigimos desde el norte hacia el sur transportándonos en parte en avión, en parte vía terrestre dándonos la posibilidad de conocer un país muy parecido a América Latina donde vivimos en cuanto a su geografía y su clima pero muy diferente en cuanto su cultura sus costumbres y su historia. En un recorrido por la parte sur del río Mekong nos invitaron a almorzar en la casa de un poblador que preparó los alimentos en su propia cocina con leña y los ofreció con generosidad y amabilidad. En los pocos días que duró nuestro recorrido descubrimos un país que nos sorprendió ya que la imagen que teníamos era de un país atrasado y con muchas dificultades, pero Vietnam sin duda es un sitio que valdría la pena volver a visitar."
+      ],
+      "places": [
+        {
+          "name": "Bahia de Ha Long",
+          "type": "Otro",
+          "town": "",
+          "note": "PAaisaje increiblemente bello"
+        }
+      ],
+      "album": [
+        "fotos/007-vietnam-alb-1.jpg",
+        "fotos/007-vietnam-alb-2.jpg",
+        "fotos/007-vietnam-alb-3.jpg",
+        "fotos/007-vietnam-alb-4.jpg"
+      ],
+      "monthIdx": 3,
+      "createdAt": 1,
+      "updatedAt": 1783307617405,
+      "featuredAt": null
     },
     {
       "id": "001-cambodia-cambodia",
@@ -267,49 +317,6 @@ window.BLOG_DATA = {
       "monthIdx": 3,
       "createdAt": 2,
       "updatedAt": 2
-    },
-    {
-      "id": "007-vietnam",
-      "title": "Vietnam un país subvalorado por Holywood",
-      "subtitle": "De Hanoi a Hoi An con muchas preguntas.",
-      "country": "Vietnam",
-      "region": "Norte y centro",
-      "date": "Octubre 2025",
-      "dateShort": "OCT · 25",
-      "year": 2025,
-      "readMin": 22,
-      "tags": [
-        "Asia",
-        "Road trip",
-        "Familia",
-        "Pueblos",
-        "Naturaleza"
-      ],
-      "featured": false,
-      "travelers": "Los dos",
-      "coords": "16.05° N, 108.21° E",
-      "coverImage": "fotos/007-vietnam-cover.jpg",
-      "bodyIntro": "Totalmente diferente a lo que las películas nos muestra",
-      "bodyParas": [
-        ".Cuando uno se decide ir a Vietnam, la idea que tiene es la que ha captado por las películas de Hollywood. Unos pequeños hombres ojirrasgados que se esconden bajo el suelo para hacer el mal a los salvadores que vienen del occidente. Nada más alejado de la realidad. Vietnam es un país pujante fuerte y muy grande. Un hombre poderoso, que supo superar las vicisitudes y los estragos de una guerra larga prolongada contra un enemigo diez veces más poderoso que ellos. Hoy Vietnam a partir de tener una economía comunista es un país que progresa, que exporta y que tiene bellezas naturales increíbles para mostrar a los visitantes. Lo que más nos sorprendió es la atención, la organización de los diferentes sitios turísticos. La posibilidad La mansa de su gente, se nota que son tremendamente trabajadores. Entramos por el norte y lo primero que hicimos fue ir a conocer la bahía de Jalón, sitio espectacular del cual trajimos muchos Me gusta mucho cocinar. Esa fue una de las experiencias más enriquecedoras para ella. Luego nos dirigimos desde el norte hacia el sur transportándonos en parte en avión, en parte vía terrestre dándonos la posibilidad de conocer un país muy parecido a América Latina donde vivimos Colombia en cuanto a su geografía y su clima pero muy diferente en cuanto su cultura sus costumbres y su historia. En la parte del río Mekong almorzar en la casa de un poblador que preparó los alimentos en su propia cocina con leña y los ofreció con una generosidad que sorprende. Modernas. Lo que nos sorprendió porque la imagen que teníamos era de un país atrasado y con muchas dificultades. Vietnam sin duda es un viaje que valdría la pena volver a hacer."
-      ],
-      "places": [
-        {
-          "name": "Bahia de Ha Long",
-          "type": "Otro",
-          "town": "",
-          "note": "PAaisaje increiblemente bello"
-        }
-      ],
-      "album": [
-        "fotos/007-vietnam-alb-1.jpg",
-        "fotos/007-vietnam-alb-2.jpg",
-        "fotos/007-vietnam-alb-3.jpg",
-        "fotos/007-vietnam-alb-4.jpg"
-      ],
-      "monthIdx": 9,
-      "createdAt": 1,
-      "updatedAt": 1
     }
   ],
   "wishlist": [

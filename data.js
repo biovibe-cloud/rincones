@@ -53,13 +53,14 @@ window.BLOG_DATA = {
       "subtitle": "Una semana caminando conociendo Canada con un grupo de extraordinarios amigos",
       "country": "Canada",
       "region": "Niagara",
-      "date": "Septiembre 2025",
-      "dateShort": "SEP · 25",
-      "year": 2025,
+      "date": "Marzo 2017",
+      "dateShort": "MAR · 17",
+      "year": 2017,
       "readMin": 12,
       "tags": [
         "América",
-        "Amigos"
+        "Amigos",
+        "Ciudad"
       ],
       "featured": true,
       "travelers": "Con Amigos",
@@ -97,9 +98,9 @@ window.BLOG_DATA = {
         "fotos/004-cinque-terre-alb-1.jpg",
         "fotos/004-cinque-terre-alb-2.jpg"
       ],
-      "monthIdx": 8,
+      "monthIdx": 2,
       "createdAt": 4,
-      "updatedAt": 1783310190462,
+      "updatedAt": 1783310762283,
       "featuredAt": 1783293275165
     },
     {

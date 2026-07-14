@@ -25,12 +25,12 @@ window.BLOG_DATA = {
       "coverImage": "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-cover.jpg",
       "bodyIntro": "Segundo viaje con los hijos previo a un evento de trabajo",
       "bodyParas": [
-        "A comienzos de 2006 tuvimos un evento de trabajo en Chile y decidimos llevar a los chicos, estaban muy emocionados. Viajamos en la aerolínea LAN y llegamos a Santiago, la capital de Chile a un hotel llamado Novotel, el cual les encantó. Tenía piscina que disfrutaron un poco.",
-        "Ricky estaba cerca de cumplir los 12 años, Santi iba a cumplir 7 añitos. Hicimos un tour por la ciudad, almorzamos en el mercado, probamos el salmón chileno, en un sitio llamado donde Augusto, también conocimos el centro histórico, estuvimos degustando algunos vinos chilenos con un grupo de distribuidores de Herbalife, y allí los chicos conocieron a Humberto y a Cira, congeniaron mucho con Humberto, quien les prometió una hamburguesa McDonald's que hasta el día de hoy no ha cumplido. Ricky lo bautizó Humvértigo.",
-        "También tuvimos la oportunidad de subir al buque Escuela Gloria. Estuvimos en Viña del Mar y también en Valparaíso, en donde subimos por un tren cremallera con un grupo de amigos de Perú, inclusive estaban el tío Mario y Ruth. Fuimos a observar la panorámica de la ciudad.",
-        "Después de los tures, nos concentramos en la extravaganza, el evento de trabajo al que debíamos asistir y como la tía Marta también viajó al evento pero no entraba el primer día porque era mayorista, cuidó a los muchachos en el hotel y ya para sábado y domingo los llevamos al sitio donde era el evento un pabellón de ferias llamado Espacio Riesco.",
-        "En ese evento tuvimos a Jim Rohn, motivador que tuvo Herbalife por muchos años, y a Enrique y Chela Varela, los gestores de los clubes de nutrición.",
-        "Después de la Extravaganza nos llevaron a unas vacaciones que nos habíamos ganado a un sitio llamado Sky Portillo, que era como una montaña fría donde había pistas para esquiar. Disfrutaron mucho la nieve, jugamos con ella y también fuimos caminando hasta la frontera de Chile y Argentina.",
+        "A comienzos de 2006 tuvimos un evento de trabajo en Chile y decidimos llevar a los chicos, estaban muy emocionados. Viajamos en la aerolínea LAN y llegamos a Santiago la capital de Chile a un hotel llamado Novotel, el cual les encantó. Tenía piscina que disfrutaron un poco.",
+        "Ricky estaba cerca de cumplir los 12 años, Santi iba a cumplir 7 añitos. Hicimos un tour por la ciudad, almorzamos en el mercado, probamos el salmón chileno en un sitio llamado \"donde Augusto\", también conocimos el centro histórico, estuvimos degustando algunos vinos chilenos con un grupo de distribuidores de Herbalife y allí los chicos conocieron a Humberto y a Cira, congeniaron mucho con Humberto quien les prometió una hamburguesa McDonald's, promesa por cumplir. Ricky lo bautizó Humvértigo.",
+        "También tuvimos la oportunidad de subir al buque Escuela Gloria. Estuvimos en Viña del Mar y también en Valparaíso en donde subimos por un tren cremallera con un grupo de amigos de Perú, inclusive estaban el tío Mario y Ruth. Fuimos a observar la panorámica de la ciudad.",
+        "Después de los tures nos concentramos en la extravaganza, el evento de trabajo al que debíamos asistir y como la tía Marta también viajó al evento pero no entraba el primer día porque era mayorista, cuidó a los muchachos en el hotel y ya para sábado y domingo los llevamos al sitio donde era el evento un pabellón de ferias llamado Espacio Riesco.",
+        "En ese evento tuvimos a Jim Rohn, motivador que tuvo Herbalife por muchos años y a Enrique y Chela Varela los gestores de los clubes de nutrición.",
+        "Después de la Extravaganza nos llevaron a unas vacaciones que nos habíamos ganado a un sitio llamado Sky Portillo que era como una montaña fría donde había pistas para esquiar. Disfrutaron mucho la nieve, jugamos con ella y también fuimos caminando hasta la frontera de Chile y Argentina.",
         "Dora"
       ],
       "places": [
@@ -53,7 +53,7 @@ window.BLOG_DATA = {
       ],
       "monthIdx": 0,
       "createdAt": 1783989959394,
-      "updatedAt": 1783990343076,
+      "updatedAt": 1783995655457,
       "featuredAt": 1783989959394
     },
     {

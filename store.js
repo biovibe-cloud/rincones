@@ -121,7 +121,10 @@
     const seeds = SEED_POSTS
       .filter(p => !overlay.deleted.includes(p.id))
       .map(p => overlay.edited[p.id] ? { ...p, ...overlay.edited[p.id] } : p);
-    const created = overlay.created || [];
+    const seedIds = new Set(SEED_POSTS.map(p => p.id));
+    // Si una historia "creada" ya fue publicada (su id ahora vive en data.js
+    // como semilla), descartamos la copia vieja del overlay para no duplicarla.
+    const created = (overlay.created || []).filter(p => !seedIds.has(p.id));
     const all = [...created, ...seeds].map(p => ({ ...p, monthIdx: deriveMonthIdx(p) }));
     ensureTimestamps(all);
     return naturalSort(all);

@@ -21,7 +21,7 @@ window.BLOG_DATA = {
       ],
       "travelers": "Los cuatro",
       "featured": true,
-      "coords": "",
+      "coords": "33°26'31.2\"S 70°39'14.3\"W",
       "coverImage": "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-cover.jpg",
       "bodyIntro": "Segundo viaje con los hijos previo a un evento de trabajo",
       "bodyParas": [
@@ -53,7 +53,7 @@ window.BLOG_DATA = {
       ],
       "monthIdx": 0,
       "createdAt": 1783989959394,
-      "updatedAt": 1783995655457,
+      "updatedAt": 1783998736248,
       "featuredAt": 1783989959394
     },
     {

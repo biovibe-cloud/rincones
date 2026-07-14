@@ -4,6 +4,114 @@
 window.BLOG_DATA = {
   "posts": [
     {
+      "id": "008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo",
+      "title": "Viaje a Chile con los chicos a evento de trabajo",
+      "subtitle": "Las maravillas de Chile",
+      "country": "Chile",
+      "region": "Área Metropolitana",
+      "date": "Enero 2006",
+      "dateShort": "ENE · 06",
+      "year": 2006,
+      "readMin": 5,
+      "tags": [
+        "América",
+        "Naturaleza",
+        "Ciudad",
+        "Familia"
+      ],
+      "travelers": "Los cuatro",
+      "featured": true,
+      "coords": "",
+      "coverImage": "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-cover.jpg",
+      "bodyIntro": "Segundo viaje con los hijos previo a un evento de trabajo",
+      "bodyParas": [
+        "A comienzos de 2006 tuvimos un evento de trabajo en Chile y decidimos llevar a los chicos, estaban muy emocionados. Viajamos en la aerolínea LAN y llegamos a Santiago, la capital de Chile a un hotel llamado Novotel, el cual les encantó. Tenía piscina que disfrutaron un poco.",
+        "Ricky estaba cerca de cumplir los 12 años, Santi iba a cumplir 7 añitos. Hicimos un tour por la ciudad, almorzamos en el mercado, probamos el salmón chileno, en un sitio llamado donde Augusto, también conocimos el centro histórico, estuvimos degustando algunos vinos chilenos con un grupo de distribuidores de Herbalife, y allí los chicos conocieron a Humberto y a Cira, congeniaron mucho con Humberto, quien les prometió una hamburguesa McDonald's que hasta el día de hoy no ha cumplido. Ricky lo bautizó Humvértigo.",
+        "También tuvimos la oportunidad de subir al buque Escuela Gloria. Estuvimos en Viña del Mar y también en Valparaíso, en donde subimos por un tren cremallera con un grupo de amigos de Perú, inclusive estaban el tío Mario y Ruth. Fuimos a observar la panorámica de la ciudad.",
+        "Después de los tures, nos concentramos en la extravaganza, el evento de trabajo al que debíamos asistir y como la tía Marta también viajó al evento pero no entraba el primer día porque era mayorista, cuidó a los muchachos en el hotel y ya para sábado y domingo los llevamos al sitio donde era el evento un pabellón de ferias llamado Espacio Riesco.",
+        "En ese evento tuvimos a Jim Rohn, motivador que tuvo Herbalife por muchos años, y a Enrique y Chela Varela, los gestores de los clubes de nutrición.",
+        "Después de la Extravaganza nos llevaron a unas vacaciones que nos habíamos ganado a un sitio llamado Sky Portillo, que era como una montaña fría donde había pistas para esquiar. Disfrutaron mucho la nieve, jugamos con ella y también fuimos caminando hasta la frontera de Chile y Argentina.",
+        "Dora"
+      ],
+      "places": [
+        {
+          "name": "Sky Portillo",
+          "type": "Mirador",
+          "town": "Santiago",
+          "note": "Hermoso Paisaje de montaña invernal"
+        }
+      ],
+      "album": [
+        "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-alb-1.jpg",
+        "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-alb-2.jpg",
+        "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-alb-3.jpg",
+        "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-alb-4.jpg",
+        "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-alb-5.jpg",
+        "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-alb-6.jpg",
+        "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-alb-7.jpg",
+        "fotos/008-viaje-a-chile-con-los-chicos-a-evento-de-trabajo-alb-8.jpg"
+      ],
+      "monthIdx": 0,
+      "createdAt": 1783989959394,
+      "updatedAt": 1783990343076,
+      "featuredAt": 1783989959394
+    },
+    {
+      "id": "004-cinque-terre",
+      "title": "El placer de viajar con amigos",
+      "subtitle": "Una semana caminando conociendo Canada con un grupo de extraordinarios amigos",
+      "country": "Canada",
+      "region": "Niagara",
+      "date": "Septiembre 2025",
+      "dateShort": "SEP · 25",
+      "year": 2025,
+      "readMin": 12,
+      "tags": [
+        "América",
+        "Amigos"
+      ],
+      "featured": false,
+      "travelers": "Con Amigos",
+      "coords": "43.65° N, 79.38° W",
+      "coverImage": "fotos/004-cinque-terre-cover.jpg",
+      "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",
+      "bodyParas": [
+        "En 2017 tuvimos la gran oportunidad de compartir con algunos amigos momentos extraordinarios visitando Canadá. Ha sido uno de los viajes más placenteros que hemos podido tener: las risas, los buenos momentos, la alegría, la actitud ante la vida , la generosidad para enseñar y los momentos sencillos caminando por calles de Canadá son de los recuerdos más extraordinarios que vamos a conservar.",
+        "Arribamos a Toronto donde quedamos de encontrarnos y el líder del viaje nos citó en un hotel muy bonito. Fuimos entrando uno a uno al lobby para ser recibidos con caluroso abrazo de nuestros amigos. Descansamos un rato y luego salimos a cenar. Tuvimos la posibilidad de compartir en una taberna, reírnos tomar fotos contar historias y cada uno enriquecer a los demás con su buena vibra. Al día siguiente nos dirigimos a las Cataratas del Niágara, ese esplendoroso lugar que sólo habíamos visto en fotografías y del que teníamos la impresión de que sería algo majestuoso, que no decepcionó. Pero nada supera la posibilidad de compartir con personas exitosas que hacen su vida cada vez mejor y que día a día trabajan para hacer la vida de los demás mucho mejor.",
+        "Marzo en el hemisferio norte es uno de los momentos con clima más agradables para visitar. Se está terminando el invierno y los árboles comienzan a cambiar de color, a reverdecer. El clima es frío pero suave. Los paisajes todavía con nieve. Para nosotros los latinos siempre ha sido un gran atractivo caminar por calles blancas, disfrutar en pequeños restaurantes calentados artificialmente, la luz para tomar fotografías espectaculares esos son ingredientes que nos permitieron disfrutar mucho del paisaje, del ambiente y del clima.",
+        "Estuvimos en Toronto varios días y luego nos separamos de nuestros amigos y nos dirigimos hacia  Quebec. Este ya fue un viaje de pareja donde pudimos caminar de la mano, disfrutar cada uno del otro, aventurarnos un poco en zonas congeladas, visitar un hotel de nieve, tomar un trago con parte de las paredes del lugar, y como siempre disfrutar de la compañía mutua.",
+        "Después de varios días nos regresamos en tren para posteriormente regresar a Colombia. Ha sido otro de esos viajes esplendorosos que la vida nos regala."
+      ],
+      "places": [
+        {
+          "name": "CAstillo de Quebec",
+          "type": "Otro",
+          "town": "Quebec",
+          "note": "Hotel de lujo en una edificación bella"
+        },
+        {
+          "name": "Cataratas del Niagara",
+          "type": "Mirador",
+          "town": "Niagara",
+          "note": "El poder de la naturaleza"
+        },
+        {
+          "name": "Bisonte",
+          "type": "Comida",
+          "town": "Quebec",
+          "note": "Nos atrevimos a probar"
+        }
+      ],
+      "album": [
+        "fotos/004-cinque-terre-alb-1.jpg",
+        "fotos/004-cinque-terre-alb-2.jpg"
+      ],
+      "monthIdx": 8,
+      "createdAt": 4,
+      "updatedAt": 1783310190462,
+      "featuredAt": null
+    },
+    {
       "id": "002-asia-encantadora",
       "title": "Asia encantadora",
       "subtitle": "Dos paises sorprendentes - Tailandia",
@@ -46,62 +154,6 @@ window.BLOG_DATA = {
       "createdAt": 6,
       "updatedAt": 1783309657629,
       "featuredAt": null
-    },
-    {
-      "id": "004-cinque-terre",
-      "title": "El placer de viajar con amigos",
-      "subtitle": "Una semana caminando conociendo Canada con un grupo de extraordinarios amigos",
-      "country": "Canada",
-      "region": "Niagara",
-      "date": "Marzo 2017",
-      "dateShort": "MAR · 17",
-      "year": 2017,
-      "readMin": 12,
-      "tags": [
-        "América",
-        "Amigos",
-        "Ciudad"
-      ],
-      "featured": true,
-      "travelers": "Con Amigos",
-      "coords": "43.65° N, 79.38° W",
-      "coverImage": "fotos/004-cinque-terre-cover.jpg",
-      "bodyIntro": "Dicen que te pareces a las personas que te rodean, si eso es cierto el 2017 nos trajo una gran oprtunidad para ser mejores personas por que nuestros compañeros de este viaje son mas que extraordinarias",
-      "bodyParas": [
-        "En 2017 tuvimos la gran oportunidad de compartir con algunos amigos momentos extraordinarios visitando Canadá. Ha sido uno de los viajes más placenteros que hemos podido tener: las risas, los buenos momentos, la alegría, la actitud ante la vida , la generosidad para enseñar y los momentos sencillos caminando por calles de Canadá son de los recuerdos más extraordinarios que vamos a conservar.",
-        "Arribamos a Toronto donde quedamos de encontrarnos y el líder del viaje nos citó en un hotel muy bonito. Fuimos entrando uno a uno al lobby para ser recibidos con caluroso abrazo de nuestros amigos. Descansamos un rato y luego salimos a cenar. Tuvimos la posibilidad de compartir en una taberna, reírnos tomar fotos contar historias y cada uno enriquecer a los demás con su buena vibra. Al día siguiente nos dirigimos a las Cataratas del Niágara, ese esplendoroso lugar que sólo habíamos visto en fotografías y del que teníamos la impresión de que sería algo majestuoso, que no decepcionó. Pero nada supera la posibilidad de compartir con personas exitosas que hacen su vida cada vez mejor y que día a día trabajan para hacer la vida de los demás mucho mejor.",
-        "Marzo en el hemisferio norte es uno de los momentos con clima más agradables para visitar. Se está terminando el invierno y los árboles comienzan a cambiar de color, a reverdecer. El clima es frío pero suave. Los paisajes todavía con nieve. Para nosotros los latinos siempre ha sido un gran atractivo caminar por calles blancas, disfrutar en pequeños restaurantes calentados artificialmente, la luz para tomar fotografías espectaculares esos son ingredientes que nos permitieron disfrutar mucho del paisaje, del ambiente y del clima.",
-        "Estuvimos en Toronto varios días y luego nos separamos de nuestros amigos y nos dirigimos hacia  Quebec. Este ya fue un viaje de pareja donde pudimos caminar de la mano, disfrutar cada uno del otro, aventurarnos un poco en zonas congeladas, visitar un hotel de nieve, tomar un trago con parte de las paredes del lugar, y como siempre disfrutar de la compañía mutua.",
-        "Después de varios días nos regresamos en tren para posteriormente regresar a Colombia. Ha sido otro de esos viajes esplendorosos que la vida nos regala."
-      ],
-      "places": [
-        {
-          "name": "CAstillo de Quebec",
-          "type": "Otro",
-          "town": "Quebec",
-          "note": "Hotel de lujo en una edificación bella"
-        },
-        {
-          "name": "Cataratas del Niagara",
-          "type": "Mirador",
-          "town": "Niagara",
-          "note": "El poder de la naturaleza"
-        },
-        {
-          "name": "Bisonte",
-          "type": "Comida",
-          "town": "Quebec",
-          "note": "Nos atrevimos a probar"
-        }
-      ],
-      "album": [
-        "fotos/004-cinque-terre-alb-1.jpg",
-        "fotos/004-cinque-terre-alb-2.jpg"
-      ],
-      "monthIdx": 2,
-      "createdAt": 4,
-      "updatedAt": 1783310762283,
-      "featuredAt": 1783293275165
     },
     {
       "id": "007-vietnam",
@@ -340,7 +392,7 @@ window.BLOG_DATA = {
       "tag": "sueño"
     }
   ],
-  "nextStoryNumber": 8,
+  "nextStoryNumber": 9,
   "family": {
     "name": "Ruben y Dora",
     "intro": "Somos Ruben y Dora, amamos viajar y lo hacemos desde que estamos juntos. Viajamos mucho en pareja y, cuando podemos, con nuestros dos hijos.",
